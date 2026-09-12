@@ -6,9 +6,6 @@
 
     <title>Trupti V | AI & Data Science</title>
 
-    <meta name="description"
-          content="Portfolio of Trupti V - AI & Data Science, Data Analytics, Machine Learning and Generative AI.">
-
     <style>
         * {
             margin: 0;
@@ -18,71 +15,60 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1120;
-            color: #f8fafc;
+            font-family: Arial, sans-serif;
+            background: #020617;
+            color: #e2e8f0;
             line-height: 1.6;
         }
 
-        /* NAVIGATION */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 20px 8%;
+            background: rgba(2, 6, 23, 0.95);
+            padding: 18px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: rgba(11, 17, 32, 0.9);
-            backdrop-filter: blur(10px);
             z-index: 1000;
+            border-bottom: 1px solid #1e293b;
         }
 
-        .logo {
-            font-size: 24px;
+        nav .logo {
+            color: #38bdf8;
+            font-size: 22px;
             font-weight: bold;
         }
 
-        .logo span {
-            color: #38bdf8;
-        }
-
         nav ul {
-            display: flex;
             list-style: none;
-            gap: 30px;
+            display: flex;
+            gap: 25px;
         }
 
-        nav a {
+        nav ul li a {
             color: #cbd5e1;
             text-decoration: none;
+            font-weight: 500;
             transition: 0.3s;
         }
 
-        nav a:hover {
+        nav ul li a:hover {
             color: #38bdf8;
         }
 
-        /* GENERAL */
         section {
             padding: 100px 8%;
+            min-height: 80vh;
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: auto;
         }
 
-        .section-title {
-            font-size: 36px;
-            margin-bottom: 45px;
-        }
-
-        .section-title span {
-            color: #38bdf8;
-        }
-
         /* HERO */
+
         #home {
             min-height: 100vh;
             display: flex;
@@ -90,103 +76,51 @@
             padding-top: 120px;
         }
 
-       .hero {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    align-items: center;
-    gap: 70px;
-}
-
-.hero-content {
-    max-width: 700px;
-}
-
-.hero-image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image img {
-    width: 360px;
-    height: 360px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 50%;
-    border: 4px solid #38bdf8;
-    position: relative;
-    z-index: 2;
-    box-shadow: 0 0 50px rgba(56, 189, 248, 0.25);
-}
-
-.image-glow {
-    position: absolute;
-    width: 390px;
-    height: 390px;
-    border-radius: 50%;
-    background: #38bdf8;
-    opacity: 0.08;
-    filter: blur(25px);
-}
-
-.hero-subtitle {
-    color: #38bdf8 !important;
-    font-size: 20px !important;
-    font-weight: 600;
-    margin-top: -10px;
-    margin-bottom: 20px !important;
-}
-.social-links {
-    display: flex;
-    gap: 14px;
-    margin-top: 28px;
-}
-
-.social-links a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-weight: 600;
-    border: 1px solid #334155;
-    padding: 9px 16px;
-    border-radius: 8px;
-    transition: 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #38bdf8;
-    border-color: #38bdf8;
-    transform: translateY(-2px);
-}
+        .hero {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 70px;
         }
 
-        .hero small {
-            color: #38bdf8;
-            font-size: 18px;
+        .hero-content {
+            max-width: 700px;
         }
 
-        .hero h1 {
-            font-size: clamp(48px, 8vw, 82px);
-            line-height: 1.05;
-            margin: 15px 0;
-        }
-
-        .hero h1 span {
-            color: #38bdf8;
-        }
-
-        .hero h2 {
-            font-size: 28px;
-            color: #cbd5e1;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
+        .hero-content small {
             color: #94a3b8;
             font-size: 18px;
-            max-width: 700px;
-            margin-bottom: 35px;
+        }
+
+        .hero-content h1 {
+            font-size: 64px;
+            margin: 10px 0;
+            color: #f8fafc;
+        }
+
+        .hero-content h1 span {
+            color: #38bdf8;
+        }
+
+        .hero-content h2 {
+            color: #cbd5e1;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            color: #38bdf8 !important;
+            font-size: 20px !important;
+            font-weight: 600;
+            margin-top: -10px;
+            margin-bottom: 20px !important;
+        }
+
+        .hero-content p {
+            color: #94a3b8;
+            font-size: 18px;
+            margin-bottom: 25px;
         }
 
         .buttons {
@@ -197,61 +131,118 @@
 
         .btn {
             display: inline-block;
-            padding: 13px 25px;
+            padding: 12px 22px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
+            font-weight: 600;
+            transition: 0.3s ease;
+            cursor: pointer;
         }
 
-        .primary {
+        .btn.primary {
             background: #38bdf8;
-            color: #06111f;
+            color: #020617;
         }
 
-        .primary:hover {
-            transform: translateY(-3px);
+        .btn.primary:hover {
+            background: #7dd3fc;
+            transform: translateY(-2px);
         }
 
-        .secondary {
-            border: 1px solid #38bdf8;
+        .btn.secondary {
+            border: 1px solid #334155;
+            color: #cbd5e1;
+        }
+
+        .btn.secondary:hover {
+            border-color: #38bdf8;
             color: #38bdf8;
         }
 
-        .secondary:hover {
+        .social-links {
+            display: flex;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .social-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid #334155;
+            padding: 9px 16px;
+            border-radius: 8px;
+            transition: 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #38bdf8;
+            border-color: #38bdf8;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-image img {
+            width: 360px;
+            height: 360px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            border: 4px solid #38bdf8;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 0 50px rgba(56, 189, 248, 0.25);
+        }
+
+        .image-glow {
+            position: absolute;
+            width: 390px;
+            height: 390px;
+            border-radius: 50%;
             background: #38bdf8;
-            color: #06111f;
+            opacity: 0.08;
+            filter: blur(25px);
+        }
+
+        /* HEADINGS */
+
+        h2.section-title {
+            font-size: 38px;
+            margin-bottom: 35px;
+            color: #f8fafc;
+        }
+
+        h2.section-title span {
+            color: #38bdf8;
         }
 
         /* ABOUT */
-        #about {
-            background: #111827;
-        }
 
         .about-text {
-            color: #cbd5e1;
-            max-width: 850px;
-            font-size: 17px;
+            max-width: 900px;
+            color: #94a3b8;
+            font-size: 18px;
         }
 
         /* SKILLS */
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
 
         .skill-card {
-            background: #111827;
+            background: #0f172a;
+            border: 1px solid #1e293b;
             padding: 25px;
             border-radius: 12px;
-            border: 1px solid #1e293b;
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
         }
 
         .skill-card h3 {
@@ -264,56 +255,54 @@
         }
 
         /* EXPERIENCE */
-        #experience {
-            background: #111827;
+
+        .experience-card {
+            background: #0f172a;
+            border-left: 3px solid #38bdf8;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
 
-        .timeline-item {
-            border-left: 2px solid #38bdf8;
-            padding-left: 25px;
-            margin-bottom: 40px;
+        .experience-card h3 {
+            color: #f8fafc;
         }
 
-        .timeline-item h3 {
-            font-size: 23px;
-        }
-
-        .timeline-item h4 {
+        .experience-card .company {
             color: #38bdf8;
-            margin: 5px 0;
+            font-weight: 600;
         }
 
-        .timeline-item .date {
-            color: #64748b;
-            margin-bottom: 12px;
-        }
-
-        .timeline-item ul {
-            color: #cbd5e1;
-            padding-left: 20px;
+        .experience-card p {
+            color: #94a3b8;
         }
 
         /* PROJECTS */
+
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .project-card {
-            background: #111827;
+            background: #0f172a;
             border: 1px solid #1e293b;
-            border-radius: 12px;
             padding: 28px;
-            transition: 0.3s;
+            border-radius: 12px;
+            transition: 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
-            transform: translateY(-7px);
+            transform: translateY(-5px);
             border-color: #38bdf8;
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.08);
         }
 
         .project-card h3 {
+            color: #f8fafc;
             font-size: 22px;
             margin-bottom: 10px;
         }
@@ -321,28 +310,51 @@
         .project-card .tech {
             color: #38bdf8;
             font-size: 14px;
+            font-weight: 600;
             margin-bottom: 15px;
         }
 
         .project-card p {
             color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            flex-wrap: wrap;
+        }
+
+        .project-links a {
+            display: inline-block;
+            padding: 9px 15px;
+            border: 1px solid #334155;
+            border-radius: 7px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .project-links a:hover {
+            color: #38bdf8;
+            border-color: #38bdf8;
+            transform: translateY(-2px);
         }
 
         /* EDUCATION */
+
         .education-card {
-            background: #111827;
+            background: #0f172a;
+            padding: 25px;
+            border-radius: 10px;
             border: 1px solid #1e293b;
-            padding: 30px;
-            border-radius: 12px;
         }
 
         .education-card h3 {
-            font-size: 23px;
-        }
-
-        .education-card h4 {
-            color: #38bdf8;
-            margin: 5px 0;
+            color: #f8fafc;
         }
 
         .education-card p {
@@ -350,100 +362,131 @@
         }
 
         /* CERTIFICATIONS */
+
         .certifications {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
 
-        .cert {
-            background: #111827;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 3px solid #38bdf8;
+        .certification {
+            background: #0f172a;
+            padding: 18px;
+            border: 1px solid #1e293b;
+            border-radius: 8px;
             color: #cbd5e1;
         }
 
         /* CONTACT */
-        #contact {
-            background: #111827;
+
+        .contact-box {
             text-align: center;
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            padding: 45px;
+            border-radius: 12px;
         }
 
-        .contact-text {
+        .contact-box p {
             color: #94a3b8;
-            margin-bottom: 25px;
+            margin: 10px 0;
         }
 
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .contact-links a {
+        .contact-box a {
             color: #38bdf8;
             text-decoration: none;
         }
 
         /* FOOTER */
+
         footer {
             text-align: center;
-            padding: 25px;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
             color: #64748b;
-            background: #070b14;
         }
 
         /* MOBILE */
-        @media (max-width: 700px) {
+
+        @media (max-width: 900px) {
 
             nav {
-                padding: 18px 5%;
+                padding: 15px 5%;
             }
 
             nav ul {
-                display: none;
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .hero-content {
+                margin: auto;
+            }
+
+            .hero-image {
+                order: -1;
+            }
+
+            .hero-image img {
+                width: 280px;
+                height: 280px;
+            }
+
+            .image-glow {
+                width: 300px;
+                height: 300px;
+            }
+
+            .buttons,
+            .social-links {
+                justify-content: center;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .certifications {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                position: relative;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            #home {
+                padding-top: 70px;
             }
 
             section {
-                padding: 80px 5%;
+                padding: 70px 5%;
             }
 
-            .hero h1 {
-                font-size: 50px;
+            .hero-content h1 {
+                font-size: 45px;
             }
 
-            .hero h2 {
-                font-size: 22px;
+            .hero-content h2 {
+                font-size: 24px;
             }
-            .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 50px;
-}
 
-.hero-content {
-    margin: auto;
-}
-
-.hero-image {
-    order: -1;
-}
-
-.hero-image img {
-    width: 280px;
-    height: 280px;
-}
-
-.image-glow {
-    width: 300px;
-    height: 300px;
-}
-
-.social-links {
-    justify-content: center;
-}
+            .hero-subtitle {
+                font-size: 17px !important;
+            }
         }
     </style>
 </head>
@@ -451,8 +494,9 @@
 <body>
 
     <!-- NAVIGATION -->
+
     <nav>
-        <div class="logo">Trupti<span>.</span></div>
+        <div class="logo">Trupti V.</div>
 
         <ul>
             <li><a href="#home">Home</a></li>
@@ -464,83 +508,87 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
-<!-- HERO -->
-<section id="home">
 
-    <div class="container hero">
 
-        <div class="hero-content">
+    <!-- HERO -->
 
-            <small>Hello, I'm</small>
+    <section id="home">
 
-            <h1>
-                Trupti <span>V.</span>
-            </h1>
+        <div class="container hero">
 
-            <h2>
-                AI & Data Science
-            </h2>
+            <div class="hero-content">
 
-            <p class="hero-subtitle">
-                Data Analytics&nbsp;&nbsp;•&nbsp;&nbsp;Machine Learning&nbsp;&nbsp;•&nbsp;&nbsp;Generative AI
-            </p>
+                <small>Hello, I'm</small>
 
-            <p>
-                AI and Data Science graduate passionate about building
-                data-driven solutions, intelligent applications, and
-                practical machine learning systems.
-            </p>
+                <h1>
+                    Trupti <span>V.</span>
+                </h1>
 
-            <div class="buttons">
+                <h2>
+                    AI & Data Science
+                </h2>
 
-                <a href="#projects" class="btn primary">
-                    View My Projects
-                </a>
+                <p class="hero-subtitle">
+                    Data Analytics&nbsp;&nbsp;•&nbsp;&nbsp;Machine Learning&nbsp;&nbsp;•&nbsp;&nbsp;Generative AI
+                </p>
 
-                <a href="Trupti%20resume.pdf" class="btn secondary" download>
-                    Download Resume
-                </a>
+                <p>
+                    AI and Data Science graduate passionate about building
+                    data-driven solutions, intelligent applications, and
+                    practical machine learning systems.
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#projects" class="btn primary">
+                        View My Projects
+                    </a>
+
+                    <a href="Trupti%20resume.pdf"
+                       class="btn secondary"
+                       download>
+                        Download Resume
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a href="https://www.linkedin.com/in/trupti-v-48076b237/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        in&nbsp;&nbsp; LinkedIn
+                    </a>
+
+                    <a href="https://github.com/Trupti23112"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        &lt;/&gt;&nbsp;&nbsp; GitHub
+                    </a>
+
+                </div>
 
             </div>
 
-           <div class="social-links">
 
-    <a href="https://www.linkedin.com/in/trupti-v-48076b237/"
-       target="_blank"
-       rel="noopener noreferrer">
-        in&nbsp;&nbsp; LinkedIn
-    </a>
+            <div class="hero-image">
 
-    <a href="https://github.com/Trupti23112"
-       target="_blank"
-       rel="noopener noreferrer">
-        &lt;/&gt;&nbsp;&nbsp; GitHub
-    </a>
+                <div class="image-glow"></div>
 
-</div>
+                <img src="PFP.png"
+                     alt="Trupti V - AI and Data Science professional">
+
+            </div>
 
         </div>
 
-
-        <div class="hero-image">
-
-            <div class="image-glow"></div>
-
-            <img src="PFP.png"
-                 alt="Trupti V - AI and Data Science professional">
-
-        </div>
-
-    </div>
-
-</section>
-
-  
     </section>
 
 
     <!-- ABOUT -->
+
     <section id="about">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -549,19 +597,21 @@
 
             <p class="about-text">
                 I am an AI and Data Science graduate with hands-on experience
-                in data science, software development, backend development,
-                machine learning, Generative AI, and full-stack application
-                development. I enjoy building data-driven and AI-powered
-                solutions that combine analytical thinking with practical
-                software development.
+                in data analytics, machine learning, Generative AI,
+                backend development, and full-stack application development.
+                I enjoy transforming data and AI concepts into practical,
+                user-focused solutions.
             </p>
 
         </div>
+
     </section>
 
 
     <!-- SKILLS -->
+
     <section id="skills">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -572,172 +622,124 @@
 
                 <div class="skill-card">
                     <h3>Programming</h3>
-                    <p>Python, SQL, JavaScript, R</p>
+                    <p>Python • SQL • JavaScript • R</p>
                 </div>
 
                 <div class="skill-card">
-                    <h3>Data Analysis</h3>
+                    <h3>Data Analytics</h3>
                     <p>
-                        Pandas, NumPy, Scikit-learn, EDA,
-                        Data Cleaning, Power BI, Tableau,
-                        Matplotlib, Seaborn
+                        Pandas • NumPy • Scikit-learn • EDA •
+                        Data Cleaning • Power BI • Tableau
                     </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>AI & Machine Learning</h3>
                     <p>
-                        Machine Learning, Deep Learning,
-                        Generative AI, LLMs, NLP, RAG,
-                        Anomaly Detection, Predictive Analytics
+                        Machine Learning • Deep Learning • GenAI •
+                        LLMs • NLP • RAG • Prompt Engineering
                     </p>
                 </div>
 
                 <div class="skill-card">
-                    <h3>Software Development</h3>
+                    <h3>Development</h3>
                     <p>
-                        FastAPI, React.js, REST APIs,
-                        Frontend Development, Backend Development,
-                        Git, GitHub
+                        FastAPI • React.js • REST APIs •
+                        Frontend • Backend • Responsive Web Design
                     </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Frameworks & Libraries</h3>
                     <p>
-                        TensorFlow, Keras, PyTorch,
-                        Hugging Face Transformers,
-                        OpenCV, gTTS
+                        TensorFlow • Keras • PyTorch • OpenCV •
+                        Hugging Face Transformers
                     </p>
                 </div>
 
                 <div class="skill-card">
                     <h3>Databases & Tools</h3>
                     <p>
-                        MySQL, PostgreSQL, MongoDB,
-                        ChromaDB, Jupyter Notebook,
-                        Google Colab, VS Code
+                        MySQL • PostgreSQL • MongoDB • ChromaDB •
+                        Git • GitHub • Jupyter • VS Code
                     </p>
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
 
     <!-- EXPERIENCE -->
+
     <section id="experience">
+
         <div class="container">
 
             <h2 class="section-title">
-                My <span>Experience</span>
+                Work <span>Experience</span>
             </h2>
 
-            <div class="timeline-item">
+            <div class="experience-card">
 
                 <h3>Data Science Intern</h3>
 
-                <h4>VisionAstraa EV Academy</h4>
-
-                <div class="date">
-                    Feb 2026 – May 2026 | Bengaluru, India
+                <div class="company">
+                    VisionAstraa EV Academy • Feb 2026 – May 2026
                 </div>
 
-                <ul>
-                    <li>
-                        Collected, cleaned, and processed EV charging
-                        network datasets from multiple sources.
-                    </li>
-
-                    <li>
-                        Developed and evaluated anomaly detection models
-                        using Isolation Forest and XGBoost.
-                    </li>
-
-                    <li>
-                        Performed data preparation, segmentation,
-                        and feature engineering.
-                    </li>
-
-                    <li>
-                        Built real-time monitoring dashboards and
-                        RESTful APIs using FastAPI.
-                    </li>
-                </ul>
+                <p>
+                    Worked with EV charging network datasets, anomaly
+                    detection, feature engineering, FastAPI monitoring
+                    dashboards, APIs, and analytical reporting.
+                </p>
 
             </div>
 
 
-            <div class="timeline-item">
+            <div class="experience-card">
 
-                <h3>R Data Analyst Intern</h3>
+                <h3>R Data Analyst</h3>
 
-                <h4>Yuva Intern</h4>
-
-                <div class="date">
-                    Jan 2026 – Feb 2026 | Bengaluru, India
+                <div class="company">
+                    Yuva Intern • Jan 2026 – Feb 2026
                 </div>
 
-                <ul>
-                    <li>
-                        Built multiple linear regression models
-                        to predict fuel efficiency.
-                    </li>
-
-                    <li>
-                        Achieved R² = 0.83 and Pearson r = 0.868
-                        (p &lt; 0.001).
-                    </li>
-
-                    <li>
-                        Conducted correlation analysis and
-                        statistical modeling.
-                    </li>
-
-                    <li>
-                        Created visualizations including bar charts,
-                        histograms, scatter plots, and boxplots.
-                    </li>
-                </ul>
+                <p>
+                    Applied multiple linear regression, correlation analysis,
+                    statistical modelling and visualization to analyze
+                    fuel-efficiency data.
+                </p>
 
             </div>
 
 
-            <div class="timeline-item">
+            <div class="experience-card">
 
                 <h3>Data Analytics Job Simulation</h3>
 
-                <h4>Deloitte – Forage</h4>
-
-                <div class="date">
-                    Dec 2025 | Virtual Experience
+                <div class="company">
+                    Deloitte – Forage • Dec 2025
                 </div>
 
-                <ul>
-                    <li>
-                        Conducted exploratory data analysis on
-                        business datasets.
-                    </li>
-
-                    <li>
-                        Cleaned, transformed, and analyzed
-                        structured datasets.
-                    </li>
-
-                    <li>
-                        Created visualizations and dashboards
-                        to communicate findings.
-                    </li>
-                </ul>
+                <p>
+                    Performed exploratory data analysis, data cleaning,
+                    transformation, visualization and dashboard creation.
+                </p>
 
             </div>
 
         </div>
+
     </section>
 
 
     <!-- PROJECTS -->
+
     <section id="projects">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -746,7 +748,11 @@
 
             <div class="projects-grid">
 
+
+                <!-- DOCMIND -->
+
                 <div class="project-card">
+
                     <h3>DocMind</h3>
 
                     <div class="tech">
@@ -758,10 +764,30 @@
                         Generation assistant for document ingestion,
                         semantic retrieval, and question answering.
                     </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/Trupti23112/ai-pdf-chatbot"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                        <a href="https://trupti23112.github.io/ai-pdf-chatbot/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Demo ↗
+                        </a>
+
+                    </div>
+
                 </div>
 
 
+                <!-- OCPP -->
+
                 <div class="project-card">
+
                     <h3>OCPP Spoofing Detection</h3>
 
                     <div class="tech">
@@ -773,10 +799,24 @@
                         spoofing and intrusion attempts in EV charging
                         communication networks.
                     </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/Trupti23112/EV-Project"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
                 </div>
 
 
+                <!-- AI DRIVER -->
+
                 <div class="project-card">
+
                     <h3>AI Driver Monitoring</h3>
 
                     <div class="tech">
@@ -784,14 +824,35 @@
                     </div>
 
                     <p>
-                        Developed a real-time computer vision system
-                        for driver fatigue detection and collision
-                        avoidance.
+                        Developed a driver-safety monitoring system with
+                        interactive simulation for drowsiness, distraction,
+                        obstacle detection, alerts, analytics, and trip
+                        monitoring.
                     </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/Trupti23112/AI-Driver-Monitoring"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                        <a href="https://trupti23112.github.io/AI-Driver-Monitoring/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Demo ↗
+                        </a>
+
+                    </div>
+
                 </div>
 
 
+                <!-- SMART SIGN -->
+
                 <div class="project-card">
+
                     <h3>Smart Sign</h3>
 
                     <div class="tech">
@@ -802,10 +863,24 @@
                         Developed an end-to-end CNN-based traffic sign
                         recognition system with real-time audio responses.
                     </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/Trupti23112/TSR"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                    </div>
+
                 </div>
 
 
+                <!-- CLOSET CURATED -->
+
                 <div class="project-card">
+
                     <h3>ClosetCurated</h3>
 
                     <div class="tech">
@@ -817,15 +892,36 @@
                         web application with interactive user interfaces
                         and styling recommendations.
                     </p>
+
+                    <div class="project-links">
+
+                        <a href="https://github.com/Trupti23112/closetcurated"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                        <a href="https://trupti23112.github.io/closetcurated/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Live Demo ↗
+                        </a>
+
+                    </div>
+
                 </div>
 
             </div>
+
         </div>
+
     </section>
 
 
     <!-- EDUCATION -->
+
     <section id="education">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -835,16 +931,15 @@
             <div class="education-card">
 
                 <h3>
-                    Bachelor of Engineering in
-                    Artificial Intelligence and Data Science
+                    B.E. Artificial Intelligence & Data Science
                 </h3>
 
-                <h4>
+                <p>
                     BGS College of Engineering and Technology
-                </h4>
+                </p>
 
                 <p>
-                    Dec 2022 – May 2026 | Bengaluru, India
+                    Dec 2022 – May 2026
                 </p>
 
                 <p>
@@ -854,11 +949,14 @@
             </div>
 
         </div>
+
     </section>
 
 
     <!-- CERTIFICATIONS -->
+
     <section id="certifications">
+
         <div class="container">
 
             <h2 class="section-title">
@@ -867,85 +965,101 @@
 
             <div class="certifications">
 
-                <div class="cert">
-                    Artificial Intelligence Fundamentals –
-                    Great Learning
+                <div class="certification">
+                    AI Fundamentals — Great Learning
                 </div>
 
-                <div class="cert">
-                    Introduction to Natural Language Processing –
-                    Great Learning
+                <div class="certification">
+                    Introduction to NLP — Great Learning
                 </div>
 
-                <div class="cert">
-                    Implementing Deep Learning –
-                    Infosys Springboard
+                <div class="certification">
+                    Implementing Deep Learning — Infosys Springboard
                 </div>
 
-                <div class="cert">
-                    Techniques for Big Data Analytics –
-                    Infosys Springboard
+                <div class="certification">
+                    Techniques for Big Data Analytics — Infosys Springboard
                 </div>
 
-                <div class="cert">
-                    Statistical Analysis and Modeling in R –
-                    Infosys Springboard
+                <div class="certification">
+                    Statistical Analysis and Modeling in R — Infosys Springboard
                 </div>
 
-                <div class="cert">
+                <div class="certification">
                     Data Visualization with Tableau Foundation
                 </div>
 
-                <div class="cert">
-                    Data Visualization with Tableau Pro
+                <div class="certification">
+                    Tableau Pro
                 </div>
 
-                <div class="cert">
+                <div class="certification">
                     Power BI for Beginners
                 </div>
 
             </div>
 
         </div>
+
     </section>
 
 
     <!-- CONTACT -->
+
     <section id="contact">
+
         <div class="container">
 
             <h2 class="section-title">
-                Let's <span>Connect</span>
+                Get In <span>Touch</span>
             </h2>
 
-            <p class="contact-text">
-                I'm open to opportunities in AI, Data Science,
-                Data Analytics, Machine Learning, and related roles.
-            </p>
+            <div class="contact-box">
 
-            <div class="contact-links">
+                <p>
+                    Interested in working together or discussing an opportunity?
+                </p>
 
-                <a href="mailto:truptihubli23@gmail.com">
-                    Email
-                </a>
+                <p>
+                    📧
+                    <a href="mailto:truptihubli23@gmail.com">
+                        truptihubli23@gmail.com
+                    </a>
+                </p>
 
-                <a href="https://www.linkedin.com/" target="_blank">
-                    LinkedIn
-                </a>
+                <p>
+                    📱 8884051943
+                </p>
 
-                <a href="https://github.com/Trupti23112" target="_blank">
-                    GitHub
-                </a>
+                <p>
+                    <a href="https://www.linkedin.com/in/trupti-v-48076b237/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                    &nbsp; • &nbsp;
+                    <a href="https://github.com/Trupti23112"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </p>
 
             </div>
 
         </div>
+
     </section>
 
 
     <!-- FOOTER -->
+
     <footer>
-        © 2026 Trupti V. All rights reserved.
+
+        <p>
+            © 2026 Trupti V. • AI & Data Science
+        </p>
+
     </footer>
 
 </body>
