@@ -1,1312 +1,1769 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Trupti V | AI & Data Science</title>
+  <title>Trupti V. | AI & Data Science</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+  <meta name="description"
+    content="Trupti V. - AI & Data Science graduate specializing in Data Science, Machine Learning, GenAI, NLP and Software Development.">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #020617;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
+  <style>
 
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(2, 6, 23, 0.95);
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        nav .logo {
-            color: #38bdf8;
-            font-size: 22px;
-            font-weight: bold;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav ul li a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav ul li a:hover {
-            color: #38bdf8;
-        }
-
-        section {
-            padding: 100px 8%;
-            min-height: 80vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        /* HERO */
-
-        #home {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding-top: 120px;
-        }
-
-        .hero {
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            align-items: center;
-            gap: 70px;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .hero-content small {
-            color: #94a3b8;
-            font-size: 18px;
-        }
-
-        .hero-content h1 {
-            font-size: 64px;
-            margin: 10px 0;
-            color: #f8fafc;
-        }
-
-        .hero-content h1 span {
-            color: #38bdf8;
-        }
-
-        .hero-content h2 {
-            color: #cbd5e1;
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-
-        .hero-subtitle {
-            color: #38bdf8 !important;
-            font-size: 20px !important;
-            font-weight: 600;
-            margin-top: -10px;
-            margin-bottom: 20px !important;
-        }
-
-        .hero-content p {
-            color: #94a3b8;
-            font-size: 18px;
-            margin-bottom: 25px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 22px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s ease;
-            cursor: pointer;
-        }
-
-        .btn.primary {
-            background: #38bdf8;
-            color: #020617;
-        }
-
-        .btn.primary:hover {
-            background: #7dd3fc;
-            transform: translateY(-2px);
-        }
-
-        .btn.secondary {
-            border: 1px solid #334155;
-            color: #cbd5e1;
-        }
-
-        .btn.secondary:hover {
-            border-color: #38bdf8;
-            color: #38bdf8;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 14px;
-            margin-top: 28px;
-        }
-
-        .social-links a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 600;
-            border: 1px solid #334155;
-            padding: 9px 16px;
-            border-radius: 8px;
-            transition: 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: #38bdf8;
-            border-color: #38bdf8;
-            transform: translateY(-2px);
-        }
-
-        .hero-image {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .hero-image img {
-            width: 360px;
-            height: 360px;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 50%;
-            border: 4px solid #38bdf8;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0 0 50px rgba(56, 189, 248, 0.25);
-        }
-
-        .image-glow {
-            position: absolute;
-            width: 390px;
-            height: 390px;
-            border-radius: 50%;
-            background: #38bdf8;
-            opacity: 0.08;
-            filter: blur(25px);
-        }
-
-        /* HEADINGS */
-
-        h2.section-title {
-            font-size: 38px;
-            margin-bottom: 35px;
-            color: #f8fafc;
-        }
-
-        h2.section-title span {
-            color: #38bdf8;
-        }
-
-        /* ABOUT */
-
-        .about-text {
-            max-width: 900px;
-            color: #94a3b8;
-            font-size: 18px;
-        }
-
-        /* SKILLS */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .skill-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            padding: 25px;
-            border-radius: 12px;
-        }
-
-        .skill-card h3 {
-            color: #38bdf8;
-            margin-bottom: 12px;
-        }
-
-        .skill-card p {
-            color: #94a3b8;
-        }
-
-        /* EXPERIENCE */
-
-        .experience-card {
-            background: #0f172a;
-            border-left: 3px solid #38bdf8;
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .experience-card h3 {
-            color: #f8fafc;
-        }
-
-        .experience-card .company {
-            color: #38bdf8;
-            font-weight: 600;
-        }
-
-        .experience-card p {
-            color: #94a3b8;
-        }
-
-        /* PROJECTS */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            padding: 28px;
-            border-radius: 12px;
-            transition: 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.08);
-        }
-
-        .project-card h3 {
-            color: #f8fafc;
-            font-size: 22px;
-            margin-bottom: 10px;
-        }
-
-        .project-card .tech {
-            color: #38bdf8;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-
-        .project-card p {
-            color: #94a3b8;
-            margin-bottom: 20px;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 10px;
-            margin-top: auto;
-            flex-wrap: wrap;
-        }
-
-        .project-links a {
-            display: inline-block;
-            padding: 9px 15px;
-            border: 1px solid #334155;
-            border-radius: 7px;
-            color: #cbd5e1;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        .project-links a:hover {
-            color: #38bdf8;
-            border-color: #38bdf8;
-            transform: translateY(-2px);
-        }
-
-        /* EDUCATION */
-
-        .education-card {
-            background: #0f172a;
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #1e293b;
-        }
-
-        .education-card h3 {
-            color: #f8fafc;
-        }
-
-        .education-card p {
-            color: #94a3b8;
-        }
-
-        /* CERTIFICATIONS */
-
-        .certifications {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-        }
-
-        .certification {
-            background: #0f172a;
-            padding: 18px;
-            border: 1px solid #1e293b;
-            border-radius: 8px;
-            color: #cbd5e1;
-        }
-
-        /* CONTACT */
-
-        .contact-box {
-            text-align: center;
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            padding: 45px;
-            border-radius: 12px;
-        }
-
-        .contact-box p {
-            color: #94a3b8;
-            margin: 10px 0;
-        }
-
-        .contact-box a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
-
-        /* FOOTER */
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #1e293b;
-            color: #64748b;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 900px) {
-
-            nav {
-                padding: 15px 5%;
-            }
-
-            nav ul {
-                gap: 12px;
-                font-size: 13px;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 50px;
-            }
-
-            .hero-content {
-                margin: auto;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .hero-image img {
-                width: 280px;
-                height: 280px;
-            }
-
-            .image-glow {
-                width: 300px;
-                height: 300px;
-            }
-
-            .buttons,
-            .social-links {
-                justify-content: center;
-            }
-
-            .skills-grid,
-            .projects-grid,
-            .certifications {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            nav {
-                position: relative;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            #home {
-                padding-top: 70px;
-            }
-
-            section {
-                padding: 70px 5%;
-            }
-
-            .hero-content h1 {
-                font-size: 45px;
-            }
-
-            .hero-content h2 {
-                font-size: 24px;
-            }
-
-            .hero-subtitle {
-                font-size: 17px !important;
-            }
-        }
-    </style>
     /* =========================
-   EXPERIENCE TIMELINE
-   ========================= */
+       GLOBAL
+       ========================= */
 
-.experience-timeline {
-  position: relative;
-  max-width: 950px;
-  margin: 70px auto 0;
-  padding: 20px 0;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-/* Vertical glowing line */
-.experience-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #38bdf8,
-    #38bdf8,
-    transparent
-  );
-  transform: translateX(-50%);
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #020617;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
 
-/* Timeline item */
-.timeline-item {
-  position: relative;
-  width: 100%;
-  display: flex;
-  margin-bottom: 80px;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* Alternate sides */
-.timeline-item:nth-child(odd) {
-  justify-content: flex-start;
-}
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
 
-.timeline-item:nth-child(even) {
-  justify-content: flex-end;
-}
+    section {
+      padding: 100px 0;
+    }
 
-/* Timeline dot */
-.timeline-dot {
-  position: absolute;
-  left: 50%;
-  top: 25px;
-  width: 14px;
-  height: 14px;
-  background: #38bdf8;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  box-shadow:
-    0 0 10px #38bdf8,
-    0 0 25px rgba(56, 189, 248, 0.6);
-  z-index: 2;
-}
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 60px;
+      color: #f8fafc;
+    }
 
-/* Content width */
-.timeline-content {
-  width: 44%;
-  position: relative;
-}
-
-/* Date */
-.timeline-date {
-  color: #38bdf8;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  margin-bottom: 12px;
-}
-
-/* Experience card */
-.experience-card {
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(56, 189, 248, 0.2);
-  border-radius: 18px;
-  padding: 28px;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Cyan accent */
-.experience-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 3px;
-  height: 100%;
-  background: #38bdf8;
-}
-
-/* Hover */
-.experience-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(56, 189, 248, 0.6);
-  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.12);
-}
-
-/* Type badge */
-.experience-type {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  color: #38bdf8;
-  border: 1px solid rgba(56, 189, 248, 0.35);
-  padding: 6px 10px;
-  border-radius: 20px;
-  margin-bottom: 14px;
-}
-
-/* Role */
-.experience-card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 8px;
-}
-
-/* Company */
-.experience-card .company {
-  color: #94a3b8;
-  font-size: 0.9rem;
-  margin-bottom: 16px;
-}
-
-/* Description */
-.experience-card p {
-  color: #cbd5e1;
-  line-height: 1.7;
-  font-size: 0.92rem;
-}
-
-/* Skill tags */
-.experience-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.experience-tags span {
-  font-size: 0.72rem;
-  color: #cbd5e1;
-  background: rgba(56, 189, 248, 0.08);
-  border: 1px solid rgba(56, 189, 248, 0.15);
-  padding: 6px 10px;
-  border-radius: 8px;
-}
+    .section-title span {
+      color: #38bdf8;
+    }
 
 
-/* =========================
-   MOBILE TIMELINE
-   ========================= */
+    /* =========================
+       NAVBAR
+       ========================= */
 
-@media (max-width: 768px) {
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
 
-  .experience-timeline {
-    margin-top: 50px;
-    padding-left: 25px;
-  }
+      background: rgba(2, 6, 23, 0.88);
+      backdrop-filter: blur(12px);
 
-  .experience-timeline::before {
-    left: 7px;
-    transform: none;
-  }
+      border-bottom: 1px solid rgba(56, 189, 248, 0.12);
+    }
 
-  .timeline-item,
-  .timeline-item:nth-child(odd),
-  .timeline-item:nth-child(even) {
-    justify-content: flex-start;
-    padding-left: 25px;
-    margin-bottom: 55px;
-  }
+    .nav-container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
 
-  .timeline-dot {
-    left: 0;
-    width: 12px;
-    height: 12px;
-    transform: translateX(-50%);
-  }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-  .timeline-content {
-    width: 100%;
-  }
+      padding: 18px 0;
+    }
 
-  .timeline-date {
-    font-size: 0.75rem;
-  }
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #38bdf8;
+    }
 
-  .experience-card {
-    padding: 22px;
-  }
-}
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #38bdf8;
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    #home {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      padding-top: 120px;
+
+      background:
+        radial-gradient(
+          circle at 80% 45%,
+          rgba(14, 165, 233, 0.14),
+          transparent 35%
+        );
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .hero-small {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1;
+      margin-bottom: 20px;
+      color: #f8fafc;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero h2 {
+      font-size: 1.6rem;
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #94a3b8;
+      font-size: 1.05rem;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #38bdf8;
+      color: #020617;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(56, 189, 248, 0.5);
+      color: #38bdf8;
+    }
+
+    .btn-outline:hover {
+      background: rgba(56, 189, 248, 0.1);
+      transform: translateY(-3px);
+    }
+
+    .hero-image {
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image img {
+      width: 340px;
+      height: 340px;
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 3px solid #38bdf8;
+
+      box-shadow:
+        0 0 25px rgba(56, 189, 248, 0.4),
+        0 0 70px rgba(56, 189, 248, 0.15);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    .social-links a {
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 9px 15px;
+      border-radius: 8px;
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      border-color: #38bdf8;
+      color: #38bdf8;
+    }
+
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about-content p {
+      color: #94a3b8;
+      font-size: 1rem;
+      line-height: 1.9;
+    }
+
+
+    /* =========================
+       SKILLS
+       ========================= */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(56, 189, 248, 0.15);
+      border-radius: 16px;
+      padding: 28px;
+
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 189, 248, 0.5);
+      box-shadow: 0 15px 35px rgba(56, 189, 248, 0.08);
+    }
+
+    .skill-card h3 {
+      color: #38bdf8;
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    .skill-card p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       EXPERIENCE TIMELINE
+       ========================= */
+
+    .experience-timeline {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .experience-timeline::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      bottom: 0;
+      left: 50%;
+
+      width: 2px;
+
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        #38bdf8,
+        #38bdf8,
+        transparent
+      );
+
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+
+      width: 100%;
+
+      display: flex;
+
+      margin-bottom: 80px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item:nth-child(odd) {
+      justify-content: flex-start;
+    }
+
+    .timeline-item:nth-child(even) {
+      justify-content: flex-end;
+    }
+
+    .timeline-dot {
+      position: absolute;
+
+      left: 50%;
+      top: 30px;
+
+      width: 15px;
+      height: 15px;
+
+      border-radius: 50%;
+
+      background: #38bdf8;
+
+      transform: translateX(-50%);
+
+      box-shadow:
+        0 0 10px #38bdf8,
+        0 0 25px rgba(56, 189, 248, 0.6);
+
+      z-index: 3;
+    }
+
+    .timeline-content {
+      width: 43%;
+      position: relative;
+    }
+
+    .timeline-date {
+      color: #38bdf8;
+
+      font-size: 0.78rem;
+      font-weight: 800;
+
+      letter-spacing: 1.5px;
+
+      margin-bottom: 12px;
+    }
+
+    .experience-card {
+      position: relative;
+
+      background: rgba(15, 23, 42, 0.82);
+
+      border: 1px solid rgba(56, 189, 248, 0.18);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      overflow: hidden;
+
+      backdrop-filter: blur(10px);
+
+      transition: all 0.3s ease;
+    }
+
+    .experience-card::before {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      top: 0;
+
+      width: 3px;
+      height: 100%;
+
+      background: #38bdf8;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-6px);
+
+      border-color: rgba(56, 189, 248, 0.55);
+
+      box-shadow:
+        0 15px 40px rgba(56, 189, 248, 0.12);
+    }
+
+    .experience-type {
+      display: inline-block;
+
+      color: #38bdf8;
+
+      border: 1px solid rgba(56, 189, 248, 0.35);
+
+      padding: 5px 10px;
+
+      border-radius: 20px;
+
+      font-size: 0.65rem;
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 15px;
+    }
+
+    .experience-card h3 {
+      font-size: 1.35rem;
+      color: #f8fafc;
+      margin-bottom: 7px;
+    }
+
+    .experience-card .company {
+      color: #94a3b8;
+      font-size: 0.88rem;
+      margin-bottom: 15px;
+    }
+
+    .experience-card p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+
+    .experience-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin-top: 20px;
+    }
+
+    .experience-tags span {
+      color: #cbd5e1;
+
+      background: rgba(56, 189, 248, 0.07);
+
+      border: 1px solid rgba(56, 189, 248, 0.15);
+
+      padding: 5px 9px;
+
+      border-radius: 7px;
+
+      font-size: 0.68rem;
+    }
+
+
+    /* =========================
+       PROJECTS
+       ========================= */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .project-card {
+      background: rgba(15, 23, 42, 0.78);
+
+      border: 1px solid rgba(56, 189, 248, 0.15);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-7px);
+
+      border-color: rgba(56, 189, 248, 0.55);
+
+      box-shadow:
+        0 18px 40px rgba(56, 189, 248, 0.1);
+    }
+
+    .project-card h3 {
+      color: #f8fafc;
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+    }
+
+    .project-card p {
+      color: #94a3b8;
+
+      font-size: 0.9rem;
+
+      line-height: 1.7;
+
+      margin-bottom: 18px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 7px;
+
+      margin-bottom: 22px;
+    }
+
+    .tech-stack span {
+      font-size: 0.68rem;
+
+      color: #38bdf8;
+
+      border: 1px solid rgba(56, 189, 248, 0.2);
+
+      padding: 5px 8px;
+
+      border-radius: 7px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .project-links a {
+      padding: 8px 13px;
+
+      border-radius: 7px;
+
+      font-size: 0.75rem;
+
+      font-weight: 700;
+
+      border: 1px solid rgba(56, 189, 248, 0.35);
+
+      color: #38bdf8;
+
+      transition: 0.3s;
+    }
+
+    .project-links a:hover {
+      background: rgba(56, 189, 248, 0.1);
+
+      border-color: #38bdf8;
+    }
+
+
+    /* =========================
+       EDUCATION
+       ========================= */
+
+    .education-card {
+      max-width: 800px;
+
+      margin: auto;
+
+      padding: 30px;
+
+      background: rgba(15, 23, 42, 0.75);
+
+      border: 1px solid rgba(56, 189, 248, 0.15);
+
+      border-radius: 18px;
+
+      text-align: center;
+    }
+
+    .education-card h3 {
+      color: #f8fafc;
+
+      font-size: 1.3rem;
+
+      margin-bottom: 10px;
+    }
+
+    .education-card .degree {
+      color: #38bdf8;
+
+      margin-bottom: 8px;
+    }
+
+    .education-card p {
+      color: #94a3b8;
+
+      font-size: 0.9rem;
+    }
+
+
+    /* =========================
+       CERTIFICATIONS
+       ========================= */
+
+    .certifications-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 15px;
+
+      max-width: 900px;
+
+      margin: auto;
+    }
+
+    .certification {
+      padding: 17px 20px;
+
+      background: rgba(15, 23, 42, 0.7);
+
+      border-left: 3px solid #38bdf8;
+
+      border-radius: 8px;
+
+      color: #cbd5e1;
+
+      font-size: 0.88rem;
+    }
+
+
+    /* =========================
+       CONTACT
+       ========================= */
+
+    .contact-content {
+      text-align: center;
+
+      max-width: 700px;
+
+      margin: auto;
+    }
+
+    .contact-content p {
+      color: #94a3b8;
+
+      margin-bottom: 25px;
+    }
+
+    .contact-links {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+    }
+
+    .contact-links a {
+      padding: 11px 18px;
+
+      border: 1px solid rgba(56, 189, 248, 0.3);
+
+      border-radius: 8px;
+
+      color: #38bdf8;
+
+      font-size: 0.85rem;
+
+      transition: 0.3s;
+    }
+
+    .contact-links a:hover {
+      background: rgba(56, 189, 248, 0.1);
+
+      border-color: #38bdf8;
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      padding: 30px 0;
+
+      text-align: center;
+
+      border-top: 1px solid rgba(148, 163, 184, 0.1);
+
+      color: #64748b;
+
+      font-size: 0.8rem;
+    }
+
+
+    /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 0.75rem;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons,
+      .social-links {
+        justify-content: center;
+      }
+
+      .hero-image {
+        order: -1;
+      }
+
+      .hero-image img {
+        width: 270px;
+        height: 270px;
+      }
+
+      .skills-grid,
+      .projects-grid,
+      .certifications-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      /* Timeline becomes single column */
+
+      .experience-timeline {
+        padding-left: 28px;
+      }
+
+      .experience-timeline::before {
+        left: 7px;
+        transform: none;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(odd),
+      .timeline-item:nth-child(even) {
+        justify-content: flex-start;
+
+        padding-left: 25px;
+
+        margin-bottom: 55px;
+      }
+
+      .timeline-dot {
+        left: 7px;
+
+        width: 13px;
+        height: 13px;
+
+        transform: translateX(-50%);
+      }
+
+      .timeline-content {
+        width: 100%;
+      }
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .nav-container {
+        flex-direction: column;
+
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero h2 {
+        font-size: 1.3rem;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .experience-card {
+        padding: 22px;
+      }
+
+    }
+
+  </style>
+
 </head>
+
 
 <body>
 
-    <!-- NAVIGATION -->
 
-    <nav>
-        <div class="logo">Trupti V.</div>
+  <!-- =========================
+       NAVIGATION
+       ========================= -->
 
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
 
+    <div class="nav-container">
 
-    <!-- HERO -->
+      <a href="#home" class="logo">
+        Trupti V.
+      </a>
 
-    <section id="home">
+      <ul class="nav-links">
 
-        <div class="container hero">
+        <li>
+          <a href="#home">Home</a>
+        </li>
 
-            <div class="hero-content">
+        <li>
+          <a href="#about">About</a>
+        </li>
 
-                <small>Hello, I'm</small>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
 
-                <h1>
-                    Trupti <span>V.</span>
-                </h1>
+        <li>
+          <a href="#experience">Experience</a>
+        </li>
 
-                <h2>
-                    AI & Data Science
-                </h2>
+        <li>
+          <a href="#projects">Projects</a>
+        </li>
 
-                <p class="hero-subtitle">
-                    Data Analytics&nbsp;&nbsp;•&nbsp;&nbsp;Machine Learning&nbsp;&nbsp;•&nbsp;&nbsp;Generative AI
-                </p>
+        <li>
+          <a href="#education">Education</a>
+        </li>
 
-                <p>
-                    AI and Data Science graduate passionate about building
-                    data-driven solutions, intelligent applications, and
-                    practical machine learning systems.
-                </p>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
-                <div class="buttons">
+      </ul>
 
-                    <a href="#projects" class="btn primary">
-                        View My Projects
-                    </a>
+    </div>
 
-                    <a href="Trupti%20resume.pdf"
-                       class="btn secondary"
-                       download>
-                        Download Resume
-                    </a>
-
-                </div>
-
-                <div class="social-links">
-
-                    <a href="https://www.linkedin.com/in/trupti-v-48076b237/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        in&nbsp;&nbsp; LinkedIn
-                    </a>
-
-                    <a href="https://github.com/Trupti23112"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        &lt;/&gt;&nbsp;&nbsp; GitHub
-                    </a>
-
-                </div>
-
-            </div>
+  </nav>
 
 
-            <div class="hero-image">
 
-                <div class="image-glow"></div>
+  <!-- =========================
+       HERO
+       ========================= -->
 
-                <img src="PFP.png"
-                     alt="Trupti V - AI and Data Science professional">
+  <section id="home">
 
-            </div>
+    <div class="container">
 
-        </div>
-
-    </section>
+      <div class="hero">
 
 
-    <!-- ABOUT -->
+        <div>
 
-    <section id="about">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                About <span>Me</span>
-            </h2>
-
-            <p class="about-text">
-                I am an AI and Data Science graduate with hands-on experience
-                in data analytics, machine learning, Generative AI,
-                backend development, and full-stack application development.
-                I enjoy transforming data and AI concepts into practical,
-                user-focused solutions.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-
-    <section id="skills">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Technical <span>Skills</span>
-            </h2>
-
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <h3>Programming</h3>
-                    <p>Python • SQL • JavaScript • R</p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Data Analytics</h3>
-                    <p>
-                        Pandas • NumPy • Scikit-learn • EDA •
-                        Data Cleaning • Power BI • Tableau
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>AI & Machine Learning</h3>
-                    <p>
-                        Machine Learning • Deep Learning • GenAI •
-                        LLMs • NLP • RAG • Prompt Engineering
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Development</h3>
-                    <p>
-                        FastAPI • React.js • REST APIs •
-                        Frontend • Backend • Responsive Web Design
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Frameworks & Libraries</h3>
-                    <p>
-                        TensorFlow • Keras • PyTorch • OpenCV •
-                        Hugging Face Transformers
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <h3>Databases & Tools</h3>
-                    <p>
-                        MySQL • PostgreSQL • MongoDB • ChromaDB •
-                        Git • GitHub • Jupyter • VS Code
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EXPERIENCE -->
-<section id="experience">
-  <div class="container">
-    <h2 class="section-title"><span>Experience</span></h2>
-
-    <div class="experience-timeline">
-
-      <!-- Deloitte -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-
-        <div class="timeline-content">
-          <div class="timeline-date">DEC 2025</div>
-
-          <div class="experience-card">
-            <span class="experience-type">VIRTUAL JOB SIMULATION</span>
-
-            <h3>Data Analytics Job Simulation</h3>
-
-            <div class="company">
-              Deloitte – Forage
-            </div>
-
-            <p>
-              Completed a virtual job simulation focused on exploratory data
-              analysis, data cleaning, transformation, visualization and
-              dashboard creation.
-            </p>
-
-            <div class="experience-tags">
-              <span>Data Analytics</span>
-              <span>EDA</span>
-              <span>Data Cleaning</span>
-              <span>Visualization</span>
-            </div>
+          <div class="hero-small">
+            Hello, I'm
           </div>
-        </div>
-      </div>
+
+          <h1>
+            Trupti <span>V.</span>
+          </h1>
+
+          <h2>
+            AI & Data Science
+          </h2>
+
+          <p>
+            AI & Data Science graduate passionate about Data Science,
+            Machine Learning, Generative AI, NLP and building practical
+            software solutions.
+          </p>
 
 
-      <!-- Yuva Intern -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
+          <div class="hero-buttons">
 
-        <div class="timeline-content">
-          <div class="timeline-date">JAN 2026 – FEB 2026</div>
+            <a
+              href="Trupti%20resume.pdf"
+              class="btn btn-primary"
+              target="_blank"
+            >
+              View Resume
+            </a>
 
-          <div class="experience-card">
-            <span class="experience-type">VIRTUAL INTERNSHIP</span>
+            <a
+              href="#projects"
+              class="btn btn-outline"
+            >
+              View Projects
+            </a>
 
-            <h3>R Data Analyst</h3>
-
-            <div class="company">
-              Yuva Intern
-            </div>
-
-            <p>
-              Applied multiple linear regression, correlation analysis,
-              statistical modelling and visualization to analyze
-              fuel-efficiency data.
-            </p>
-
-            <div class="experience-tags">
-              <span>R</span>
-              <span>Statistical Modeling</span>
-              <span>Regression</span>
-              <span>Data Visualization</span>
-            </div>
           </div>
-        </div>
-      </div>
 
 
-      <!-- VisionAstraa -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
+          <div class="social-links">
 
-        <div class="timeline-content">
-          <div class="timeline-date">FEB 2026 – MAY 2026</div>
+            <a
+              href="https://linkedin.com/in/trupti-v-48076b237"
+              target="_blank"
+            >
+              LinkedIn
+            </a>
 
-          <div class="experience-card">
-            <span class="experience-type">INTERNSHIP</span>
+            <a
+              href="https://github.com/Trupti23112"
+              target="_blank"
+            >
+              GitHub
+            </a>
 
-            <h3>Data Science Intern</h3>
-
-            <div class="company">
-              VisionAstraa EV Academy · Bengaluru
-            </div>
-
-            <p>
-              Worked with EV charging network datasets, anomaly detection,
-              feature engineering, FastAPI monitoring dashboards, APIs
-              and analytical reporting.
-            </p>
-
-            <div class="experience-tags">
-              <span>Python</span>
-              <span>Machine Learning</span>
-              <span>FastAPI</span>
-              <span>Anomaly Detection</span>
-            </div>
           </div>
+
         </div>
+
+
+        <div class="hero-image">
+
+          <img
+            src="PFP.png"
+            alt="Trupti V."
+          >
+
+        </div>
+
+
       </div>
 
     </div>
-  </div>
-</section>
 
-    <!-- PROJECTS -->
+  </section>
 
-    <section id="projects">
 
-        <div class="container">
 
-            <h2 class="section-title">
-                Featured <span>Projects</span>
-            </h2>
+  <!-- =========================
+       ABOUT
+       ========================= -->
 
-            <div class="projects-grid">
+  <section id="about">
 
+    <div class="container">
 
-                <!-- DOCMIND -->
+      <h2 class="section-title">
+        About <span>Me</span>
+      </h2>
 
-                <div class="project-card">
 
-                    <h3>DocMind</h3>
-
-                    <div class="tech">
-                        Python • FastAPI • ChromaDB • Hugging Face
-                    </div>
-
-                    <p>
-                        Developed an LLM-powered Retrieval-Augmented
-                        Generation assistant for document ingestion,
-                        semantic retrieval, and question answering.
-                    </p>
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/Trupti23112/ai-pdf-chatbot"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GitHub ↗
-                        </a>
-
-                        <a href="https://trupti23112.github.io/ai-pdf-chatbot/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Live Demo ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- OCPP -->
-
-                <div class="project-card">
-
-                    <h3>OCPP Spoofing Detection</h3>
-
-                    <div class="tech">
-                        Python • FastAPI • XGBoost
-                    </div>
-
-                    <p>
-                        Developed a machine learning solution to detect
-                        spoofing and intrusion attempts in EV charging
-                        communication networks.
-                    </p>
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/Trupti23112/EV-Project"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GitHub ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- AI DRIVER -->
-
-                <div class="project-card">
-
-                    <h3>AI Driver Monitoring</h3>
-
-                    <div class="tech">
-                        Python • OpenCV • TensorFlow
-                    </div>
-
-                    <p>
-                        Developed a driver-safety monitoring system with
-                        interactive simulation for drowsiness, distraction,
-                        obstacle detection, alerts, analytics, and trip
-                        monitoring.
-                    </p>
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/Trupti23112/AI-Driver-Monitoring"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GitHub ↗
-                        </a>
-
-                        <a href="https://trupti23112.github.io/AI-Driver-Monitoring/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Live Demo ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SMART SIGN -->
-
-                <div class="project-card">
-
-                    <h3>Smart Sign</h3>
-
-                    <div class="tech">
-                        Python • TensorFlow • Keras • OpenCV • gTTS
-                    </div>
-
-                    <p>
-                        Developed an end-to-end CNN-based traffic sign
-                        recognition system with real-time audio responses.
-                    </p>
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/Trupti23112/TSR"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GitHub ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <!-- CLOSET CURATED -->
-
-                <div class="project-card">
-
-                    <h3>ClosetCurated</h3>
-
-                    <div class="tech">
-                        HTML • CSS • JavaScript • GitHub Pages
-                    </div>
-
-                    <p>
-                        Developed a responsive fashion discovery
-                        web application with interactive user interfaces
-                        and styling recommendations.
-                    </p>
-
-                    <div class="project-links">
-
-                        <a href="https://github.com/Trupti23112/closetcurated"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            GitHub ↗
-                        </a>
-
-                        <a href="https://trupti23112.github.io/closetcurated/"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Live Demo ↗
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- EDUCATION -->
-
-    <section id="education">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                <span>Education</span>
-            </h2>
-
-            <div class="education-card">
-
-                <h3>
-                    B.E. Artificial Intelligence & Data Science
-                </h3>
-
-                <p>
-                    BGS College of Engineering and Technology
-                </p>
-
-                <p>
-                    Dec 2022 – May 2026
-                </p>
-
-                <p>
-                    CGPA: 6.9 / 10
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CERTIFICATIONS -->
-
-    <section id="certifications">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                <span>Certifications</span>
-            </h2>
-
-            <div class="certifications">
-
-                <div class="certification">
-                    AI Fundamentals — Great Learning
-                </div>
-
-                <div class="certification">
-                    Introduction to NLP — Great Learning
-                </div>
-
-                <div class="certification">
-                    Implementing Deep Learning — Infosys Springboard
-                </div>
-
-                <div class="certification">
-                    Techniques for Big Data Analytics — Infosys Springboard
-                </div>
-
-                <div class="certification">
-                    Statistical Analysis and Modeling in R — Infosys Springboard
-                </div>
-
-                <div class="certification">
-                    Data Visualization with Tableau Foundation
-                </div>
-
-                <div class="certification">
-                    Tableau Pro
-                </div>
-
-                <div class="certification">
-                    Power BI for Beginners
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="container">
-
-            <h2 class="section-title">
-                Get In <span>Touch</span>
-            </h2>
-
-            <div class="contact-box">
-
-                <p>
-                    Interested in working together or discussing an opportunity?
-                </p>
-
-                <p>
-                    📧
-                    <a href="mailto:truptihubli23@gmail.com">
-                        truptihubli23@gmail.com
-                    </a>
-                </p>
-
-                <p>
-                    📱 8884051943
-                </p>
-
-                <p>
-                    <a href="https://www.linkedin.com/in/trupti-v-48076b237/"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        LinkedIn
-                    </a>
-                    &nbsp; • &nbsp;
-                    <a href="https://github.com/Trupti23112"
-                       target="_blank"
-                       rel="noopener noreferrer">
-                        GitHub
-                    </a>
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FOOTER -->
-
-    <footer>
+      <div class="about-content">
 
         <p>
-            © 2026 Trupti V. • AI & Data Science
+          I am an AI and Data Science graduate with hands-on experience
+          in data analysis, machine learning, Generative AI, NLP,
+          backend development and full-stack development. I enjoy
+          transforming data into meaningful insights and building
+          intelligent applications that solve real-world problems.
         </p>
 
-    </footer>
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       SKILLS
+       ========================= -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Technical <span>Skills</span>
+      </h2>
+
+
+      <div class="skills-grid">
+
+
+        <div class="skill-card">
+
+          <h3>
+            Programming
+          </h3>
+
+          <p>
+            Python, SQL, JavaScript, R
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>
+            Data Analysis & Visualization
+          </h3>
+
+          <p>
+            Pandas, NumPy, Scikit-learn, EDA, Data Cleaning,
+            Power BI, Tableau, Matplotlib, Seaborn
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>
+            AI & Machine Learning
+          </h3>
+
+          <p>
+            Machine Learning, Deep Learning, GenAI, LLMs, NLP,
+            RAG, Prompt Engineering, Anomaly Detection,
+            Predictive Analytics, Statistical Modeling,
+            Feature Engineering, Computer Vision
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>
+            Software Development
+          </h3>
+
+          <p>
+            FastAPI, React.js, REST APIs, Frontend Development,
+            Backend Development, Responsive Web Design,
+            Git, GitHub
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>
+            Libraries & Frameworks
+          </h3>
+
+          <p>
+            Hugging Face Transformers, TensorFlow, Keras,
+            PyTorch, OpenCV, gTTS
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>
+            Databases & Tools
+          </h3>
+
+          <p>
+            MySQL, PostgreSQL, MongoDB, ChromaDB,
+            Jupyter, Google Colab, VS Code
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       EXPERIENCE
+       ========================= -->
+
+  <section id="experience">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        <span>Experience</span>
+      </h2>
+
+
+      <div class="experience-timeline">
+
+
+        <!-- =====================
+             DELOITTE
+             ===================== -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-content">
+
+            <div class="timeline-date">
+              DEC 2025
+            </div>
+
+
+            <div class="experience-card">
+
+              <span class="experience-type">
+                VIRTUAL JOB SIMULATION
+              </span>
+
+
+              <h3>
+                Data Analytics Job Simulation
+              </h3>
+
+
+              <div class="company">
+                Deloitte – Forage
+              </div>
+
+
+              <p>
+                Completed a virtual job simulation focused on
+                exploratory data analysis, data cleaning,
+                transformation, visualization and dashboard creation.
+              </p>
+
+
+              <div class="experience-tags">
+
+                <span>Data Analytics</span>
+                <span>EDA</span>
+                <span>Data Cleaning</span>
+                <span>Visualization</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             YUVA INTERN
+             ===================== -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-content">
+
+            <div class="timeline-date">
+              JAN 2026 – FEB 2026
+            </div>
+
+
+            <div class="experience-card">
+
+              <span class="experience-type">
+                VIRTUAL INTERNSHIP
+              </span>
+
+
+              <h3>
+                R Data Analyst
+              </h3>
+
+
+              <div class="company">
+                Yuva Intern
+              </div>
+
+
+              <p>
+                Applied multiple linear regression, correlation
+                analysis, statistical modelling and visualization
+                to analyze fuel-efficiency data.
+              </p>
+
+
+              <div class="experience-tags">
+
+                <span>R</span>
+                <span>Statistical Modeling</span>
+                <span>Regression</span>
+                <span>Data Visualization</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =====================
+             VISIONASTRAA
+             ===================== -->
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot"></div>
+
+
+          <div class="timeline-content">
+
+            <div class="timeline-date">
+              FEB 2026 – MAY 2026
+            </div>
+
+
+            <div class="experience-card">
+
+              <span class="experience-type">
+                INTERNSHIP
+              </span>
+
+
+              <h3>
+                Data Science Intern
+              </h3>
+
+
+              <div class="company">
+                VisionAstraa EV Academy · Bengaluru
+              </div>
+
+
+              <p>
+                Worked with EV charging network datasets,
+                anomaly detection, feature engineering,
+                FastAPI monitoring dashboards, APIs and
+                analytical reporting.
+              </p>
+
+
+              <div class="experience-tags">
+
+                <span>Python</span>
+                <span>Machine Learning</span>
+                <span>FastAPI</span>
+                <span>Anomaly Detection</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       PROJECTS
+       ========================= -->
+
+  <section id="projects">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Featured <span>Projects</span>
+      </h2>
+
+
+      <div class="projects-grid">
+
+
+        <!-- DOCMIND -->
+
+        <div class="project-card">
+
+          <h3>
+            DocMind – LLM-Powered RAG Document Assistant
+          </h3>
+
+
+          <p>
+            An intelligent document assistant that uses Retrieval
+            Augmented Generation to answer questions from uploaded
+            documents using semantic search and LLM-based responses.
+          </p>
+
+
+          <div class="tech-stack">
+
+            <span>Python</span>
+            <span>FastAPI</span>
+            <span>ChromaDB</span>
+            <span>Hugging Face</span>
+            <span>RAG</span>
+
+          </div>
+
+
+          <div class="project-links">
+
+            <a
+              href="https://github.com/Trupti23112/ai-pdf-chatbot"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+
+            <a
+              href="https://trupti23112.github.io/ai-pdf-chatbot/"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- OCPP -->
+
+        <div class="project-card">
+
+          <h3>
+            OCPP Spoofing Detection
+          </h3>
+
+
+          <p>
+            A machine-learning based system for detecting suspicious
+            and spoofed behavior in EV charging communication using
+            anomaly detection and classification techniques.
+          </p>
+
+
+          <div class="tech-stack">
+
+            <span>Python</span>
+            <span>XGBoost</span>
+            <span>FastAPI</span>
+            <span>Machine Learning</span>
+
+          </div>
+
+
+          <div class="project-links">
+
+            <a
+              href="https://github.com/Trupti23112/EV-Project"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- AI DRIVER -->
+
+        <div class="project-card">
+
+          <h3>
+            AI-Based Driver Monitoring & Collision Avoidance
+          </h3>
+
+
+          <p>
+            A driver-safety monitoring system with an interactive
+            simulation for driver attention, distraction, drowsiness,
+            obstacle detection, alerts and system performance.
+          </p>
+
+
+          <div class="tech-stack">
+
+            <span>Python</span>
+            <span>OpenCV</span>
+            <span>TensorFlow</span>
+            <span>Computer Vision</span>
+
+          </div>
+
+
+          <div class="project-links">
+
+            <a
+              href="https://github.com/Trupti23112/AI-Driver-Monitoring"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+
+            <a
+              href="https://trupti23112.github.io/AI-Driver-Monitoring/"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- SMART SIGN -->
+
+        <div class="project-card">
+
+          <h3>
+            Smart Sign – Traffic Sign Recognition
+          </h3>
+
+
+          <p>
+            A CNN-based traffic sign recognition system designed
+            to classify road signs using computer vision and deep
+            learning, with text-to-speech support.
+          </p>
+
+
+          <div class="tech-stack">
+
+            <span>Python</span>
+            <span>TensorFlow</span>
+            <span>Keras</span>
+            <span>OpenCV</span>
+            <span>gTTS</span>
+
+          </div>
+
+
+          <div class="project-links">
+
+            <a
+              href="https://github.com/Trupti23112/TSR"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- CLOSET CURATED -->
+
+        <div class="project-card">
+
+          <h3>
+            ClosetCurated – Fashion Discovery Web App
+          </h3>
+
+
+          <p>
+            A responsive fashion discovery website designed to help
+            users explore and discover curated clothing styles through
+            a clean and interactive interface.
+          </p>
+
+
+          <div class="tech-stack">
+
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub Pages</span>
+
+          </div>
+
+
+          <div class="project-links">
+
+            <a
+              href="https://github.com/Trupti23112/closetcurated"
+              target="_blank"
+            >
+              GitHub
+            </a>
+
+
+            <a
+              href="https://trupti23112.github.io/closetcurated/"
+              target="_blank"
+            >
+              Live Demo
+            </a>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       EDUCATION
+       ========================= -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        <span>Education</span>
+      </h2>
+
+
+      <div class="education-card">
+
+        <h3>
+          BGS College of Engineering and Technology
+        </h3>
+
+
+        <div class="degree">
+          BE – Artificial Intelligence & Data Science
+        </div>
+
+
+        <p>
+          Dec 2022 – May 2026
+        </p>
+
+
+        <p>
+          CGPA: 6.9 / 10
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CERTIFICATIONS
+       ========================= -->
+
+  <section id="certifications">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        <span>Certifications</span>
+      </h2>
+
+
+      <div class="certifications-grid">
+
+
+        <div class="certification">
+          AI Fundamentals – Great Learning
+        </div>
+
+
+        <div class="certification">
+          Introduction to NLP – Great Learning
+        </div>
+
+
+        <div class="certification">
+          Implementing Deep Learning – Infosys Springboard
+        </div>
+
+
+        <div class="certification">
+          Techniques for Big Data Analytics
+        </div>
+
+
+        <div class="certification">
+          Statistical Analysis and Modeling in R
+        </div>
+
+
+        <div class="certification">
+          Tableau Foundation
+        </div>
+
+
+        <div class="certification">
+          Tableau Pro
+        </div>
+
+
+        <div class="certification">
+          Power BI for Beginners
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       CONTACT
+       ========================= -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Let's <span>Connect</span>
+      </h2>
+
+
+      <div class="contact-content">
+
+        <p>
+          I'm open to opportunities in Data Science, AI/ML,
+          Data Analytics and Software Development.
+        </p>
+
+
+        <div class="contact-links">
+
+          <a href="mailto:truptihubli23@gmail.com">
+            Email
+          </a>
+
+
+          <a
+            href="https://linkedin.com/in/trupti-v-48076b237"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
+
+          <a
+            href="https://github.com/Trupti23112"
+            target="_blank"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 Trupti V. · AI & Data Science
+      </p>
+
+    </div>
+
+  </footer>
+
 
 </body>
+
 </html>
