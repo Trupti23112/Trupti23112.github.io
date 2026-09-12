@@ -16,25 +16,55 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Trupti V. | AI & Data Science">
+
   <meta
     property="og:description"
     content="AI & Data Science graduate building intelligent, data-driven solutions."
   >
+
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://trupti23112.github.io/">
-  <meta property="og:image" content="https://trupti23112.github.io/PFP.png">
+
+  <meta
+    property="og:url"
+    content="https://trupti23112.github.io/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://trupti23112.github.io/PFP.png"
+  >
+
 
   <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Trupti V. | AI & Data Science">
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Trupti V. | AI & Data Science"
+  >
+
   <meta
     name="twitter:description"
     content="AI & Data Science graduate building intelligent, data-driven solutions."
   >
-  <meta name="twitter:image" content="https://trupti23112.github.io/PFP.png">
+
+  <meta
+    name="twitter:image"
+    content="https://trupti23112.github.io/PFP.png"
+  >
+
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="PFP.png">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="PFP.png"
+  >
 
 
   <style>
@@ -67,17 +97,20 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
+
       background:
         radial-gradient(
           circle at 15% 20%,
           rgba(56, 189, 248, 0.05),
           transparent 25%
         ),
+
         radial-gradient(
           circle at 85% 80%,
           rgba(56, 189, 248, 0.04),
           transparent 25%
         );
+
       z-index: -1;
     }
 
@@ -103,9 +136,13 @@
 
     .section-title {
       text-align: center;
+
       font-size: 2.5rem;
+
       margin-bottom: 65px;
+
       color: #f8fafc;
+
       font-weight: 800;
     }
 
@@ -120,7 +157,9 @@
 
     .reveal {
       opacity: 0;
+
       transform: translateY(35px);
+
       transition:
         opacity 0.8s ease,
         transform 0.8s ease;
@@ -128,6 +167,7 @@
 
     .reveal.show {
       opacity: 1;
+
       transform: translateY(0);
     }
 
@@ -138,24 +178,33 @@
 
     nav {
       position: fixed;
+
       top: 0;
       left: 0;
+
       width: 100%;
+
       z-index: 1000;
 
       background: rgba(2, 6, 23, 0.82);
+
       backdrop-filter: blur(16px);
 
-      border-bottom: 1px solid rgba(56, 189, 248, 0.08);
+      border-bottom:
+        1px solid rgba(56, 189, 248, 0.08);
     }
 
     .nav-container {
       width: 90%;
+
       max-width: 1150px;
+
       margin: auto;
 
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       padding: 18px 0;
@@ -163,13 +212,17 @@
 
     .logo {
       font-size: 1.25rem;
+
       font-weight: 800;
+
       color: #38bdf8;
+
       letter-spacing: 0.5px;
     }
 
     .nav-links {
       display: flex;
+
       gap: 8px;
     }
 
@@ -179,6 +232,7 @@
       color: #94a3b8;
 
       font-size: 0.82rem;
+
       font-weight: 600;
 
       padding: 8px 12px;
@@ -190,12 +244,16 @@
 
     .nav-links a:hover {
       color: #38bdf8;
-      background: rgba(56, 189, 248, 0.06);
+
+      background:
+        rgba(56, 189, 248, 0.06);
     }
 
     .nav-links a.active {
       color: #38bdf8;
-      background: rgba(56, 189, 248, 0.09);
+
+      background:
+        rgba(56, 189, 248, 0.09);
     }
 
     .nav-links a.active::after {
@@ -204,9 +262,11 @@
       position: absolute;
 
       left: 50%;
+
       bottom: 2px;
 
       width: 18px;
+
       height: 2px;
 
       background: #38bdf8;
@@ -225,6 +285,7 @@
       min-height: 100vh;
 
       display: flex;
+
       align-items: center;
 
       padding-top: 130px;
@@ -240,7 +301,8 @@
     .hero {
       display: grid;
 
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns:
+        1.15fr 0.85fr;
 
       align-items: center;
 
@@ -258,7 +320,8 @@
     }
 
     .hero h1 {
-      font-size: clamp(3.4rem, 7vw, 5.8rem);
+      font-size:
+        clamp(3.4rem, 7vw, 5.8rem);
 
       line-height: 0.95;
 
@@ -273,10 +336,14 @@
       color: #38bdf8;
     }
 
-    /* Typing role */
+
+    /* ========================================
+       TYPING ROLE
+       ======================================== */
 
     .typing-wrapper {
       display: flex;
+
       align-items: center;
 
       min-height: 45px;
@@ -304,13 +371,15 @@
       display: inline-block;
 
       width: 2px;
+
       height: 25px;
 
       background: #38bdf8;
 
       margin-left: 4px;
 
-      animation: blink 0.8s infinite;
+      animation:
+        blink 0.8s infinite;
     }
 
     @keyframes blink {
@@ -326,6 +395,7 @@
       }
 
     }
+
 
     .hero p {
       max-width: 650px;
@@ -369,17 +439,20 @@
       transform: translateY(-3px);
 
       box-shadow:
-        0 10px 30px rgba(56, 189, 248, 0.28);
+        0 10px 30px
+        rgba(56, 189, 248, 0.28);
     }
 
     .btn-outline {
-      border: 1px solid rgba(56, 189, 248, 0.45);
+      border:
+        1px solid rgba(56, 189, 248, 0.45);
 
       color: #38bdf8;
     }
 
     .btn-outline:hover {
-      background: rgba(56, 189, 248, 0.08);
+      background:
+        rgba(56, 189, 248, 0.08);
 
       transform: translateY(-3px);
     }
@@ -393,7 +466,8 @@
     }
 
     .social-links a {
-      border: 1px solid rgba(148, 163, 184, 0.18);
+      border:
+        1px solid rgba(148, 163, 184, 0.18);
 
       padding: 8px 14px;
 
@@ -433,13 +507,16 @@
       position: absolute;
 
       width: 360px;
+
       height: 360px;
 
       border-radius: 50%;
 
-      border: 1px solid rgba(56, 189, 248, 0.12);
+      border:
+        1px solid rgba(56, 189, 248, 0.12);
 
-      animation: pulseRing 3s infinite;
+      animation:
+        pulseRing 3s infinite;
     }
 
     @keyframes pulseRing {
@@ -447,11 +524,13 @@
       0%,
       100% {
         transform: scale(1);
+
         opacity: 0.5;
       }
 
       50% {
         transform: scale(1.07);
+
         opacity: 1;
       }
 
@@ -461,6 +540,7 @@
       position: relative;
 
       width: 310px;
+
       height: 310px;
 
       object-fit: cover;
@@ -470,8 +550,11 @@
       border: 3px solid #38bdf8;
 
       box-shadow:
-        0 0 25px rgba(56, 189, 248, 0.4),
-        0 0 80px rgba(56, 189, 248, 0.12);
+        0 0 25px
+        rgba(56, 189, 248, 0.4),
+
+        0 0 80px
+        rgba(56, 189, 248, 0.12);
     }
 
 
@@ -482,7 +565,8 @@
     .about-layout {
       display: grid;
 
-      grid-template-columns: 1.4fr 0.6fr;
+      grid-template-columns:
+        1.4fr 0.6fr;
 
       gap: 60px;
 
@@ -524,9 +608,11 @@
     .about-highlight {
       padding: 18px 20px;
 
-      background: rgba(15, 23, 42, 0.65);
+      background:
+        rgba(15, 23, 42, 0.65);
 
-      border: 1px solid rgba(56, 189, 248, 0.13);
+      border:
+        1px solid rgba(56, 189, 248, 0.13);
 
       border-radius: 12px;
 
@@ -536,7 +622,8 @@
     .about-highlight:hover {
       transform: translateX(6px);
 
-      border-color: rgba(56, 189, 248, 0.45);
+      border-color:
+        rgba(56, 189, 248, 0.45);
     }
 
     .about-highlight strong {
@@ -563,15 +650,18 @@
     .skills-grid {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns:
+        repeat(3, 1fr);
 
       gap: 18px;
     }
 
     .skill-card {
-      background: rgba(15, 23, 42, 0.7);
+      background:
+        rgba(15, 23, 42, 0.7);
 
-      border: 1px solid rgba(56, 189, 248, 0.13);
+      border:
+        1px solid rgba(56, 189, 248, 0.13);
 
       border-radius: 16px;
 
@@ -586,25 +676,32 @@
     .skill-card:hover {
       transform: translateY(-8px);
 
-      border-color: rgba(56, 189, 248, 0.5);
+      border-color:
+        rgba(56, 189, 248, 0.5);
 
       box-shadow:
-        0 15px 35px rgba(56, 189, 248, 0.1);
+        0 15px 35px
+        rgba(56, 189, 248, 0.1);
     }
 
     .skill-icon {
       width: 42px;
+
       height: 42px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: center;
 
       border-radius: 10px;
 
-      background: rgba(56, 189, 248, 0.08);
+      background:
+        rgba(56, 189, 248, 0.08);
 
-      border: 1px solid rgba(56, 189, 248, 0.16);
+      border:
+        1px solid rgba(56, 189, 248, 0.16);
 
       font-size: 1.15rem;
 
@@ -648,19 +745,21 @@
       position: absolute;
 
       top: 0;
+
       bottom: 0;
 
       left: 50%;
 
       width: 2px;
 
-      background: linear-gradient(
-        to bottom,
-        transparent,
-        #38bdf8,
-        #38bdf8,
-        transparent
-      );
+      background:
+        linear-gradient(
+          to bottom,
+          transparent,
+          #38bdf8,
+          #38bdf8,
+          transparent
+        );
 
       transform: translateX(-50%);
     }
@@ -695,6 +794,7 @@
       top: 30px;
 
       width: 16px;
+
       height: 16px;
 
       border-radius: 50%;
@@ -729,9 +829,11 @@
     .experience-card {
       position: relative;
 
-      background: rgba(15, 23, 42, 0.8);
+      background:
+        rgba(15, 23, 42, 0.8);
 
-      border: 1px solid rgba(56, 189, 248, 0.15);
+      border:
+        1px solid rgba(56, 189, 248, 0.15);
 
       border-radius: 17px;
 
@@ -748,9 +850,11 @@
       position: absolute;
 
       left: 0;
+
       top: 0;
 
       width: 3px;
+
       height: 100%;
 
       background: #38bdf8;
@@ -759,10 +863,12 @@
     .experience-card:hover {
       transform: translateY(-7px);
 
-      border-color: rgba(56, 189, 248, 0.5);
+      border-color:
+        rgba(56, 189, 248, 0.5);
 
       box-shadow:
-        0 15px 40px rgba(56, 189, 248, 0.1);
+        0 15px 40px
+        rgba(56, 189, 248, 0.1);
     }
 
     .experience-type {
@@ -774,7 +880,8 @@
 
       color: #38bdf8;
 
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border:
+        1px solid rgba(56, 189, 248, 0.3);
 
       padding: 5px 10px;
 
@@ -826,9 +933,11 @@
     .experience-tags span {
       color: #cbd5e1;
 
-      background: rgba(56, 189, 248, 0.06);
+      background:
+        rgba(56, 189, 248, 0.06);
 
-      border: 1px solid rgba(56, 189, 248, 0.12);
+      border:
+        1px solid rgba(56, 189, 248, 0.12);
 
       padding: 4px 8px;
 
@@ -845,7 +954,8 @@
     .projects-grid {
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:
+        repeat(2, 1fr);
 
       gap: 22px;
     }
@@ -855,9 +965,11 @@
 
       min-height: 360px;
 
-      background: rgba(15, 23, 42, 0.8);
+      background:
+        rgba(15, 23, 42, 0.8);
 
-      border: 1px solid rgba(56, 189, 248, 0.13);
+      border:
+        1px solid rgba(56, 189, 248, 0.13);
 
       border-radius: 18px;
 
@@ -873,7 +985,8 @@
     .project-card:hover {
       transform: translateY(-9px);
 
-      border-color: rgba(56, 189, 248, 0.55);
+      border-color:
+        rgba(56, 189, 248, 0.55);
     }
 
     .project-info {
@@ -889,7 +1002,8 @@
     }
 
     .project-number {
-      color: rgba(56, 189, 248, 0.55);
+      color:
+        rgba(56, 189, 248, 0.55);
 
       font-family: monospace;
 
@@ -931,7 +1045,8 @@
 
       color: #38bdf8;
 
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      border:
+        1px solid rgba(56, 189, 248, 0.2);
 
       padding: 4px 7px;
 
@@ -955,7 +1070,8 @@
 
       font-weight: 700;
 
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border:
+        1px solid rgba(56, 189, 248, 0.3);
 
       color: #38bdf8;
 
@@ -969,7 +1085,9 @@
     }
 
 
-    /* Project preview */
+    /* ========================================
+       PROJECT HOVER PREVIEW
+       ======================================== */
 
     .project-preview {
       position: absolute;
@@ -1010,6 +1128,7 @@
 
     .project-preview img {
       width: 100%;
+
       height: 100%;
 
       object-fit: cover;
@@ -1023,6 +1142,7 @@
       z-index: 5;
 
       bottom: 18px;
+
       left: 20px;
 
       color: #f8fafc;
@@ -1031,22 +1151,31 @@
 
       font-weight: 700;
 
-      background: rgba(2, 6, 23, 0.75);
+      background:
+        rgba(2, 6, 23, 0.75);
 
       padding: 7px 11px;
 
       border-radius: 7px;
 
-      border: 1px solid rgba(56, 189, 248, 0.25);
+      border:
+        1px solid rgba(56, 189, 248, 0.25);
     }
 
-    /* Keep text readable above preview */
+    .project-card.has-preview:hover
+    .project-info h3,
 
-    .project-card.has-preview:hover .project-info h3,
-    .project-card.has-preview:hover .project-info p,
-    .project-card.has-preview:hover .project-number,
-    .project-card.has-preview:hover .tech-stack,
-    .project-card.has-preview:hover .project-links {
+    .project-card.has-preview:hover
+    .project-info p,
+
+    .project-card.has-preview:hover
+    .project-number,
+
+    .project-card.has-preview:hover
+    .tech-stack,
+
+    .project-card.has-preview:hover
+    .project-links {
       opacity: 0;
     }
 
@@ -1072,9 +1201,11 @@
 
       text-align: center;
 
-      background: rgba(15, 23, 42, 0.72);
+      background:
+        rgba(15, 23, 42, 0.72);
 
-      border: 1px solid rgba(56, 189, 248, 0.15);
+      border:
+        1px solid rgba(56, 189, 248, 0.15);
 
       border-radius: 18px;
 
@@ -1084,25 +1215,31 @@
     .education-card:hover {
       transform: translateY(-6px);
 
-      border-color: rgba(56, 189, 248, 0.45);
+      border-color:
+        rgba(56, 189, 248, 0.45);
     }
 
     .education-icon {
       width: 48px;
+
       height: 48px;
 
-      margin: 0 auto 18px;
+      margin:
+        0 auto 18px;
 
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       border-radius: 12px;
 
-      background: rgba(56, 189, 248, 0.08);
+      background:
+        rgba(56, 189, 248, 0.08);
 
-      border: 1px solid rgba(56, 189, 248, 0.15);
+      border:
+        1px solid rgba(56, 189, 248, 0.15);
 
       font-size: 1.2rem;
     }
@@ -1137,7 +1274,8 @@
     .certifications-grid {
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns:
+        repeat(2, 1fr);
 
       gap: 15px;
 
@@ -1155,9 +1293,11 @@
 
       padding: 17px 20px;
 
-      background: rgba(15, 23, 42, 0.7);
+      background:
+        rgba(15, 23, 42, 0.7);
 
-      border: 1px solid rgba(56, 189, 248, 0.12);
+      border:
+        1px solid rgba(56, 189, 248, 0.12);
 
       border-radius: 11px;
 
@@ -1171,28 +1311,34 @@
     .certification:hover {
       transform: translateY(-6px);
 
-      border-color: rgba(56, 189, 248, 0.45);
+      border-color:
+        rgba(56, 189, 248, 0.45);
 
       box-shadow:
-        0 10px 25px rgba(56, 189, 248, 0.08);
+        0 10px 25px
+        rgba(56, 189, 248, 0.08);
     }
 
     .cert-icon {
       flex-shrink: 0;
 
       width: 36px;
+
       height: 36px;
 
       display: flex;
 
       align-items: center;
+
       justify-content: center;
 
       border-radius: 9px;
 
-      background: rgba(56, 189, 248, 0.08);
+      background:
+        rgba(56, 189, 248, 0.08);
 
-      border: 1px solid rgba(56, 189, 248, 0.15);
+      border:
+        1px solid rgba(56, 189, 248, 0.15);
 
       font-size: 0.95rem;
     }
@@ -1239,7 +1385,8 @@
     .contact-links a {
       padding: 10px 17px;
 
-      border: 1px solid rgba(56, 189, 248, 0.25);
+      border:
+        1px solid rgba(56, 189, 248, 0.25);
 
       border-radius: 8px;
 
@@ -1251,7 +1398,8 @@
     }
 
     .contact-links a:hover {
-      background: rgba(56, 189, 248, 0.09);
+      background:
+        rgba(56, 189, 248, 0.09);
 
       border-color: #38bdf8;
 
@@ -1268,7 +1416,8 @@
 
       text-align: center;
 
-      border-top: 1px solid rgba(148, 163, 184, 0.08);
+      border-top:
+        1px solid rgba(148, 163, 184, 0.08);
 
       color: #475569;
 
@@ -1300,6 +1449,7 @@
 
       .hero p {
         margin-left: auto;
+
         margin-right: auto;
       }
 
@@ -1313,7 +1463,8 @@
       }
 
       .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
       .about-layout {
@@ -1333,6 +1484,7 @@
         grid-template-columns: 1fr;
       }
 
+
       /* Timeline mobile */
 
       .experience-timeline {
@@ -1348,6 +1500,7 @@
       .timeline-item,
       .timeline-item:nth-child(odd),
       .timeline-item:nth-child(even) {
+
         justify-content: flex-start;
 
         padding-left: 25px;
@@ -1359,6 +1512,7 @@
         left: 7px;
 
         width: 13px;
+
         height: 13px;
 
         transform: translateX(-50%);
@@ -1403,16 +1557,18 @@
 
       .typing-prefix,
       #typing-text {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
       }
 
       .hero-image img {
         width: 245px;
+
         height: 245px;
       }
 
       .hero-image::before {
         width: 285px;
+
         height: 285px;
       }
 
@@ -1448,50 +1604,75 @@
 
     <div class="nav-container">
 
-      <a href="#home" class="logo">
+      <a
+        href="#home"
+        class="logo"
+      >
         Trupti V.
       </a>
+
 
       <ul class="nav-links">
 
         <li>
-          <a href="#home" class="nav-link active">
+          <a
+            href="#home"
+            class="nav-link active"
+          >
             Home
           </a>
         </li>
 
         <li>
-          <a href="#about" class="nav-link">
+          <a
+            href="#about"
+            class="nav-link"
+          >
             About
           </a>
         </li>
 
         <li>
-          <a href="#skills" class="nav-link">
+          <a
+            href="#skills"
+            class="nav-link"
+          >
             Skills
           </a>
         </li>
 
         <li>
-          <a href="#experience" class="nav-link">
+          <a
+            href="#experience"
+            class="nav-link"
+          >
             Experience
           </a>
         </li>
 
         <li>
-          <a href="#projects" class="nav-link">
+          <a
+            href="#projects"
+            class="nav-link"
+          >
             Projects
           </a>
         </li>
 
         <li>
-          <a href="#education" class="nav-link">
+          <a
+            href="#education"
+            class="nav-link"
+          >
             Education
           </a>
         </li>
 
         <li>
-          <a href="#contact" class="nav-link">
+          <a
+            href="#contact"
+            class="nav-link"
+          >
             Contact
           </a>
         </li>
@@ -1527,10 +1708,12 @@
           </h1>
 
 
+          <!-- ROTATING TEXT -->
+
           <div class="typing-wrapper">
 
             <span class="typing-prefix">
-              I'm a
+              I specialize in
             </span>
 
             <span id="typing-text"></span>
@@ -1557,6 +1740,7 @@
               View Resume
             </a>
 
+
             <a
               href="#projects"
               class="btn btn-outline"
@@ -1575,6 +1759,7 @@
             >
               LinkedIn
             </a>
+
 
             <a
               href="https://github.com/Trupti23112"
@@ -1854,7 +2039,7 @@
       <div class="experience-timeline">
 
 
-        <!-- Deloitte -->
+        <!-- DELOITTE -->
 
         <div class="timeline-item reveal">
 
@@ -1894,10 +2079,21 @@
 
               <div class="experience-tags">
 
-                <span>Data Analytics</span>
-                <span>EDA</span>
-                <span>Data Cleaning</span>
-                <span>Visualization</span>
+                <span>
+                  Data Analytics
+                </span>
+
+                <span>
+                  EDA
+                </span>
+
+                <span>
+                  Data Cleaning
+                </span>
+
+                <span>
+                  Visualization
+                </span>
 
               </div>
 
@@ -1909,7 +2105,7 @@
 
 
 
-        <!-- Yuva -->
+        <!-- YUVA -->
 
         <div class="timeline-item reveal">
 
@@ -1950,8 +2146,11 @@
               <div class="experience-tags">
 
                 <span>R</span>
+
                 <span>Regression</span>
+
                 <span>Statistics</span>
+
                 <span>Data Visualization</span>
 
               </div>
@@ -1964,7 +2163,7 @@
 
 
 
-        <!-- VisionAstraa -->
+        <!-- VISIONASTRAA -->
 
         <div class="timeline-item reveal">
 
@@ -2006,8 +2205,11 @@
               <div class="experience-tags">
 
                 <span>Python</span>
+
                 <span>Machine Learning</span>
+
                 <span>FastAPI</span>
+
                 <span>Anomaly Detection</span>
 
               </div>
@@ -2053,9 +2255,11 @@
               01 / AI · RAG
             </div>
 
+
             <h3>
               DocMind – LLM-Powered RAG Document Assistant
             </h3>
+
 
             <p>
               An intelligent document assistant that uses
@@ -2063,15 +2267,21 @@
               from uploaded documents.
             </p>
 
+
             <div class="tech-stack">
 
               <span>Python</span>
+
               <span>FastAPI</span>
+
               <span>ChromaDB</span>
+
               <span>Hugging Face</span>
+
               <span>RAG</span>
 
             </div>
+
 
             <div class="project-links">
 
@@ -2081,6 +2291,7 @@
               >
                 GitHub ↗
               </a>
+
 
               <a
                 href="https://trupti23112.github.io/ai-pdf-chatbot/"
@@ -2107,9 +2318,11 @@
               02 / ML · EV
             </div>
 
+
             <h3>
               OCPP Spoofing Detection
             </h3>
+
 
             <p>
               A machine-learning based system for detecting
@@ -2117,14 +2330,19 @@
               communication.
             </p>
 
+
             <div class="tech-stack">
 
               <span>Python</span>
+
               <span>XGBoost</span>
+
               <span>FastAPI</span>
+
               <span>Machine Learning</span>
 
             </div>
+
 
             <div class="project-links">
 
@@ -2145,7 +2363,9 @@
 
         <!-- AI DRIVER -->
 
-        <div class="project-card has-preview reveal">
+        <div
+          class="project-card has-preview reveal"
+        >
 
           <div class="project-preview">
 
@@ -2153,6 +2373,7 @@
               src="Dashboard.png"
               alt="AI Driver Monitoring System dashboard preview"
             >
+
 
             <div class="preview-label">
               Hover Preview · SENTINEL AI Dashboard
@@ -2167,9 +2388,11 @@
               03 / COMPUTER VISION · AI
             </div>
 
+
             <h3>
               AI-Based Driver Monitoring & Collision Avoidance
             </h3>
+
 
             <p>
               A driver-safety monitoring system with driver
@@ -2177,14 +2400,19 @@
               detection, alerts and system analytics.
             </p>
 
+
             <div class="tech-stack">
 
               <span>Python</span>
+
               <span>OpenCV</span>
+
               <span>TensorFlow</span>
+
               <span>Computer Vision</span>
 
             </div>
+
 
             <div class="project-links">
 
@@ -2194,6 +2422,7 @@
               >
                 GitHub ↗
               </a>
+
 
               <a
                 href="https://trupti23112.github.io/AI-Driver-Monitoring/"
@@ -2220,9 +2449,11 @@
               04 / DEEP LEARNING · CV
             </div>
 
+
             <h3>
               Smart Sign – Traffic Sign Recognition
             </h3>
+
 
             <p>
               A CNN-based traffic sign recognition system using
@@ -2230,15 +2461,21 @@
               support.
             </p>
 
+
             <div class="tech-stack">
 
               <span>Python</span>
+
               <span>TensorFlow</span>
+
               <span>Keras</span>
+
               <span>OpenCV</span>
+
               <span>gTTS</span>
 
             </div>
+
 
             <div class="project-links">
 
@@ -2267,9 +2504,11 @@
               05 / WEB DEVELOPMENT
             </div>
 
+
             <h3>
               ClosetCurated – Fashion Discovery Web App
             </h3>
+
 
             <p>
               A responsive fashion discovery website designed
@@ -2277,14 +2516,19 @@
               styles through an interactive interface.
             </p>
 
+
             <div class="tech-stack">
 
               <span>HTML</span>
+
               <span>CSS</span>
+
               <span>JavaScript</span>
+
               <span>GitHub Pages</span>
 
             </div>
+
 
             <div class="project-links">
 
@@ -2294,6 +2538,7 @@
               >
                 GitHub ↗
               </a>
+
 
               <a
                 href="https://trupti23112.github.io/closetcurated/"
@@ -2336,13 +2581,16 @@
           🎓
         </div>
 
+
         <h3>
           BGS College of Engineering and Technology
         </h3>
 
+
         <div class="degree">
           Bachelor of Engineering in Artificial Intelligence and Data Science
         </div>
+
 
         <p>
           Dec 2022 – May 2026 · CGPA: 6.9 / 10
@@ -2487,6 +2735,7 @@
           Have an opportunity or idea?
         </h3>
 
+
         <p>
           I'm open to opportunities in Data Science, AI/ML,
           Data Analytics and Software Development.
@@ -2499,12 +2748,14 @@
             Email
           </a>
 
+
           <a
             href="https://linkedin.com/in/trupti-v-48076b237"
             target="_blank"
           >
             LinkedIn
           </a>
+
 
           <a
             href="https://github.com/Trupti23112"
@@ -2558,50 +2809,75 @@
       "Generative AI"
     ];
 
-    const typingText = document.getElementById("typing-text");
+
+    const typingText =
+      document.getElementById("typing-text");
+
 
     let roleIndex = 0;
+
     let charIndex = 0;
+
     let deleting = false;
 
 
     function typeRole() {
 
-      const currentRole = roles[roleIndex];
+      const currentRole =
+        roles[roleIndex];
+
 
       if (!deleting) {
 
         typingText.textContent =
-          currentRole.substring(0, charIndex + 1);
+          currentRole.substring(
+            0,
+            charIndex + 1
+          );
 
         charIndex++;
 
-        if (charIndex === currentRole.length) {
+
+        if (
+          charIndex ===
+          currentRole.length
+        ) {
 
           deleting = true;
 
-          setTimeout(typeRole, 1500);
+          setTimeout(
+            typeRole,
+            1500
+          );
 
           return;
         }
 
-      } else {
+      }
+
+      else {
 
         typingText.textContent =
-          currentRole.substring(0, charIndex - 1);
+          currentRole.substring(
+            0,
+            charIndex - 1
+          );
 
         charIndex--;
+
 
         if (charIndex === 0) {
 
           deleting = false;
 
           roleIndex =
-            (roleIndex + 1) % roles.length;
+            (roleIndex + 1)
+            % roles.length;
 
         }
 
       }
+
 
       setTimeout(
         typeRole,
@@ -2609,6 +2885,7 @@
       );
 
     }
+
 
     typeRole();
 
@@ -2619,97 +2896,138 @@
        ======================================== */
 
     const revealElements =
-      document.querySelectorAll(".reveal");
+      document.querySelectorAll(
+        ".reveal"
+      );
 
 
     const revealObserver =
       new IntersectionObserver(
+
         (entries) => {
 
-          entries.forEach((entry) => {
+          entries.forEach(
+            (entry) => {
 
-            if (entry.isIntersecting) {
+              if (
+                entry.isIntersecting
+              ) {
 
-              entry.target.classList.add("show");
-
-              revealObserver.unobserve(
                 entry.target
-              );
-
-            }
-
-          });
-
-        },
-        {
-          threshold: 0.12
-        }
-      );
+                  .classList
+                  .add("show");
 
 
-    revealElements.forEach((element) => {
-
-      revealObserver.observe(element);
-
-    });
-
-
-
-    /* ========================================
-       ACTIVE NAVIGATION ON SCROLL
-       ======================================== */
-
-    const sections =
-      document.querySelectorAll("section[id]");
-
-    const navLinks =
-      document.querySelectorAll(".nav-link");
-
-
-    const sectionObserver =
-      new IntersectionObserver(
-        (entries) => {
-
-          entries.forEach((entry) => {
-
-            if (entry.isIntersecting) {
-
-              navLinks.forEach((link) => {
-
-                link.classList.remove("active");
-
-              });
-
-
-              const activeLink =
-                document.querySelector(
-                  `.nav-link[href="#${entry.target.id}"]`
-                );
-
-
-              if (activeLink) {
-
-                activeLink.classList.add("active");
+                revealObserver
+                  .unobserve(
+                    entry.target
+                  );
 
               }
 
             }
-
-          });
+          );
 
         },
+
         {
-          rootMargin: "-30% 0px -60% 0px",
-          threshold: 0
+          threshold: 0.12
         }
+
       );
 
 
-    sections.forEach((section) => {
+    revealElements.forEach(
+      (element) => {
 
-      sectionObserver.observe(section);
+        revealObserver.observe(
+          element
+        );
 
-    });
+      }
+    );
+
+
+
+    /* ========================================
+       ACTIVE NAVIGATION
+       ======================================== */
+
+    const sections =
+      document.querySelectorAll(
+        "section[id]"
+      );
+
+
+    const navLinks =
+      document.querySelectorAll(
+        ".nav-link"
+      );
+
+
+    const sectionObserver =
+      new IntersectionObserver(
+
+        (entries) => {
+
+          entries.forEach(
+            (entry) => {
+
+              if (
+                entry.isIntersecting
+              ) {
+
+                navLinks.forEach(
+                  (link) => {
+
+                    link.classList
+                      .remove(
+                        "active"
+                      );
+
+                  }
+                );
+
+
+                const activeLink =
+                  document.querySelector(
+                    `.nav-link[href="#${entry.target.id}"]`
+                  );
+
+
+                if (activeLink) {
+
+                  activeLink.classList
+                    .add("active");
+
+                }
+
+              }
+
+            }
+          );
+
+        },
+
+        {
+          rootMargin:
+            "-30% 0px -60% 0px",
+
+          threshold: 0
+        }
+
+      );
+
+
+    sections.forEach(
+      (section) => {
+
+        sectionObserver.observe(
+          section
+        );
+
+      }
+    );
 
 
   </script>
