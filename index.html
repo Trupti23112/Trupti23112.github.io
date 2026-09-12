@@ -489,6 +489,207 @@
             }
         }
     </style>
+    /* =========================
+   EXPERIENCE TIMELINE
+   ========================= */
+
+.experience-timeline {
+  position: relative;
+  max-width: 950px;
+  margin: 70px auto 0;
+  padding: 20px 0;
+}
+
+/* Vertical glowing line */
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #38bdf8,
+    #38bdf8,
+    transparent
+  );
+  transform: translateX(-50%);
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  margin-bottom: 80px;
+}
+
+/* Alternate sides */
+.timeline-item:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-end;
+}
+
+/* Timeline dot */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  width: 14px;
+  height: 14px;
+  background: #38bdf8;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow:
+    0 0 10px #38bdf8,
+    0 0 25px rgba(56, 189, 248, 0.6);
+  z-index: 2;
+}
+
+/* Content width */
+.timeline-content {
+  width: 44%;
+  position: relative;
+}
+
+/* Date */
+.timeline-date {
+  color: #38bdf8;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+/* Experience card */
+.experience-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 18px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cyan accent */
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #38bdf8;
+}
+
+/* Hover */
+.experience-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(56, 189, 248, 0.6);
+  box-shadow: 0 15px 40px rgba(56, 189, 248, 0.12);
+}
+
+/* Type badge */
+.experience-type {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  padding: 6px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+/* Role */
+.experience-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 8px;
+}
+
+/* Company */
+.experience-card .company {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+}
+
+/* Description */
+.experience-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
+/* Skill tags */
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.experience-tags span {
+  font-size: 0.72rem;
+  color: #cbd5e1;
+  background: rgba(56, 189, 248, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+
+/* =========================
+   MOBILE TIMELINE
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .experience-timeline {
+    margin-top: 50px;
+    padding-left: 25px;
+  }
+
+  .experience-timeline::before {
+    left: 7px;
+    transform: none;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    justify-content: flex-start;
+    padding-left: 25px;
+    margin-bottom: 55px;
+  }
+
+  .timeline-dot {
+    left: 0;
+    width: 12px;
+    height: 12px;
+    transform: translateX(-50%);
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+
+  .experience-card {
+    padding: 22px;
+  }
+}
 </head>
 
 <body>
@@ -673,68 +874,113 @@
 
 
     <!-- EXPERIENCE -->
+<section id="experience">
+  <div class="container">
+    <h2 class="section-title"><span>Experience</span></h2>
 
-    <section id="experience">
+    <div class="experience-timeline">
 
-        <div class="container">
+      <!-- Deloitte -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
 
-            <h2 class="section-title">
-                Work <span>Experience</span>
-            </h2>
+        <div class="timeline-content">
+          <div class="timeline-date">DEC 2025</div>
 
-            <div class="experience-card">
+          <div class="experience-card">
+            <span class="experience-type">VIRTUAL JOB SIMULATION</span>
 
-                <h3>Data Science Intern</h3>
+            <h3>Data Analytics Job Simulation</h3>
 
-                <div class="company">
-                    VisionAstraa EV Academy • Feb 2026 – May 2026
-                </div>
-
-                <p>
-                    Worked with EV charging network datasets, anomaly
-                    detection, feature engineering, FastAPI monitoring
-                    dashboards, APIs, and analytical reporting.
-                </p>
-
+            <div class="company">
+              Deloitte – Forage
             </div>
 
+            <p>
+              Completed a virtual job simulation focused on exploratory data
+              analysis, data cleaning, transformation, visualization and
+              dashboard creation.
+            </p>
 
-            <div class="experience-card">
-
-                <h3>R Data Analyst</h3>
-
-                <div class="company">
-                    Yuva Intern • Jan 2026 – Feb 2026
-                </div>
-
-                <p>
-                    Applied multiple linear regression, correlation analysis,
-                    statistical modelling and visualization to analyze
-                    fuel-efficiency data.
-                </p>
-
+            <div class="experience-tags">
+              <span>Data Analytics</span>
+              <span>EDA</span>
+              <span>Data Cleaning</span>
+              <span>Visualization</span>
             </div>
-
-
-            <div class="experience-card">
-
-                <h3>Data Analytics Job Simulation</h3>
-
-                <div class="company">
-                    Deloitte – Forage • Dec 2025
-                </div>
-
-                <p>
-                    Performed exploratory data analysis, data cleaning,
-                    transformation, visualization and dashboard creation.
-                </p>
-
-            </div>
-
+          </div>
         </div>
+      </div>
 
-    </section>
 
+      <!-- Yuva Intern -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <div class="timeline-date">JAN 2026 – FEB 2026</div>
+
+          <div class="experience-card">
+            <span class="experience-type">VIRTUAL INTERNSHIP</span>
+
+            <h3>R Data Analyst</h3>
+
+            <div class="company">
+              Yuva Intern
+            </div>
+
+            <p>
+              Applied multiple linear regression, correlation analysis,
+              statistical modelling and visualization to analyze
+              fuel-efficiency data.
+            </p>
+
+            <div class="experience-tags">
+              <span>R</span>
+              <span>Statistical Modeling</span>
+              <span>Regression</span>
+              <span>Data Visualization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- VisionAstraa -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-content">
+          <div class="timeline-date">FEB 2026 – MAY 2026</div>
+
+          <div class="experience-card">
+            <span class="experience-type">INTERNSHIP</span>
+
+            <h3>Data Science Intern</h3>
+
+            <div class="company">
+              VisionAstraa EV Academy · Bengaluru
+            </div>
+
+            <p>
+              Worked with EV charging network datasets, anomaly detection,
+              feature engineering, FastAPI monitoring dashboards, APIs
+              and analytical reporting.
+            </p>
+
+            <div class="experience-tags">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>FastAPI</span>
+              <span>Anomaly Detection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- PROJECTS -->
 
