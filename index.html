@@ -244,16 +244,68 @@
        ABOUT
        ========================= */
 
-    .about-content {
-      max-width: 850px;
-      margin: auto;
-      text-align: center;
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
+      gap: 60px;
+      align-items: center;
     }
 
-    .about-content p {
+    .about-text h3 {
+      font-size: 1.7rem;
+      color: #f8fafc;
+      margin-bottom: 22px;
+      line-height: 1.3;
+    }
+
+    .about-text h3 span {
+      color: #38bdf8;
+    }
+
+    .about-text p {
       color: #94a3b8;
-      font-size: 1rem;
-      line-height: 1.9;
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 18px;
+    }
+
+    .about-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .about-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .about-highlight {
+      padding: 18px 20px;
+
+      background: rgba(15, 23, 42, 0.7);
+
+      border: 1px solid rgba(56, 189, 248, 0.15);
+
+      border-radius: 12px;
+
+      transition: 0.3s;
+    }
+
+    .about-highlight:hover {
+      border-color: rgba(56, 189, 248, 0.5);
+      transform: translateX(5px);
+    }
+
+    .about-highlight strong {
+      display: block;
+      color: #38bdf8;
+      font-size: 0.85rem;
+      margin-bottom: 3px;
+    }
+
+    .about-highlight span {
+      color: #cbd5e1;
+      font-size: 0.78rem;
     }
 
 
@@ -741,7 +793,6 @@
 
       .hero {
         grid-template-columns: 1fr;
-
         text-align: center;
       }
 
@@ -762,6 +813,11 @@
       .hero-image img {
         width: 270px;
         height: 270px;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
       }
 
       .skills-grid,
@@ -819,15 +875,12 @@
 
       .nav-container {
         flex-direction: column;
-
         gap: 12px;
       }
 
       .nav-links {
         flex-wrap: wrap;
-
         justify-content: center;
-
         gap: 10px;
       }
 
@@ -841,6 +894,10 @@
 
       .section-title {
         font-size: 2rem;
+      }
+
+      .about-text h3 {
+        font-size: 1.4rem;
       }
 
       .experience-card {
@@ -1011,15 +1068,82 @@
       </h2>
 
 
-      <div class="about-content">
+      <div class="about-layout">
 
-        <p>
-          I am an AI and Data Science graduate with hands-on experience
-          in data analysis, machine learning, Generative AI, NLP,
-          backend development and full-stack development. I enjoy
-          transforming data into meaningful insights and building
-          intelligent applications that solve real-world problems.
-        </p>
+
+        <div class="about-text">
+
+          <h3>
+            Turning <span>data</span> into intelligent solutions.
+          </h3>
+
+
+          <p>
+            I’m an AI & Data Science graduate with hands-on experience
+            in Data Science, Machine Learning, Generative AI, NLP,
+            Data Analytics, and software development.
+          </p>
+
+
+          <p>
+            I’ve built solutions across EV anomaly detection,
+            AI-powered document intelligence, computer vision,
+            and predictive analytics using Python, SQL, R,
+            FastAPI, ML frameworks, and LLMs.
+          </p>
+
+
+          <p>
+            I’m seeking opportunities in Data Science, AI/ML,
+            and Data Analytics where I can contribute to
+            meaningful, real-world solutions.
+          </p>
+
+        </div>
+
+
+        <div class="about-highlights">
+
+          <div class="about-highlight">
+
+            <strong>
+              AI & Data Science
+            </strong>
+
+            <span>
+              Machine Learning · GenAI · NLP
+            </span>
+
+          </div>
+
+
+          <div class="about-highlight">
+
+            <strong>
+              Data Analytics
+            </strong>
+
+            <span>
+              Python · SQL · R · Visualization
+            </span>
+
+          </div>
+
+
+          <div class="about-highlight">
+
+            <strong>
+              Software Development
+            </strong>
+
+            <span>
+              FastAPI · REST APIs · GitHub
+            </span>
+
+          </div>
+
+        </div>
+
 
       </div>
 
@@ -1155,9 +1279,7 @@
       <div class="experience-timeline">
 
 
-        <!-- =====================
-             DELOITTE
-             ===================== -->
+        <!-- DELOITTE -->
 
         <div class="timeline-item">
 
@@ -1212,9 +1334,7 @@
 
 
 
-        <!-- =====================
-             YUVA INTERN
-             ===================== -->
+        <!-- YUVA INTERN -->
 
         <div class="timeline-item">
 
@@ -1269,9 +1389,7 @@
 
 
 
-        <!-- =====================
-             VISIONASTRAA
-             ===================== -->
+        <!-- VISIONASTRAA -->
 
         <div class="timeline-item">
 
@@ -1609,7 +1727,7 @@
 
 
         <div class="degree">
-          BE – Artificial Intelligence & Data Science
+          Bachelor of Engineering in Artificial Intelligence and Data Science
         </div>
 
 
@@ -1647,12 +1765,12 @@
 
 
         <div class="certification">
-          AI Fundamentals – Great Learning
+          Artificial Intelligence Fundamentals – Great Learning
         </div>
 
 
         <div class="certification">
-          Introduction to NLP – Great Learning
+          Introduction to Natural Language Processing – Great Learning
         </div>
 
 
@@ -1662,22 +1780,22 @@
 
 
         <div class="certification">
-          Techniques for Big Data Analytics
+          Techniques for Big Data Analytics – Infosys Springboard
         </div>
 
 
         <div class="certification">
-          Statistical Analysis and Modeling in R
+          Statistical Analysis and Modeling in R – Infosys Springboard
         </div>
 
 
         <div class="certification">
-          Tableau Foundation
+          Data Visualization with Tableau Foundation
         </div>
 
 
         <div class="certification">
-          Tableau Pro
+          Data Visualization with Tableau Pro
         </div>
 
 
@@ -1767,3 +1885,5 @@
 </body>
 
 </html>
+
+     
